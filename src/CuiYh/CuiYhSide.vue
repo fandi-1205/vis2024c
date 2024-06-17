@@ -119,8 +119,11 @@ export default {
       svg.append('text')
         .attr('text-anchor', 'middle')
         .attr('dy', '0.35em')
+<<<<<<< Updated upstream
         .style('font-size', '7px')
+=======
         .style('font-size', '6px')
+>>>>>>> Stashed changes
         .style('font-weight', 'bold')
         .style('fill', '#000')
         .text(datasetName);
@@ -169,8 +172,11 @@ export default {
       knowledgeG.append('circle')
         .attr('cx', (d, i) => scoreScale(d.data[1]) * Math.cos(2 * Math.PI * i / knowledgeScores.length - Math.PI / 2))
         .attr('cy', (d, i) => scoreScale(d.data[1]) * Math.sin(2 * Math.PI * i / knowledgeScores.length - Math.PI / 2))
+<<<<<<< Updated upstream
         .attr('r', 2.6)
+=======
         .attr('r', 2.2)
+>>>>>>> Stashed changes
         .attr('fill', '#6BFF8D')
         .on('mouseover', function(event, d) {
           tooltip.transition()

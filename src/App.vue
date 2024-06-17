@@ -17,8 +17,11 @@ export default {
 <style>
 
 .App{
+<<<<<<< Updated upstream
   width: 240px;
+=======
   width: 250px;
+>>>>>>> Stashed changes
   height: 1100px;
   background-color: rgb(255, 255, 255);
 }

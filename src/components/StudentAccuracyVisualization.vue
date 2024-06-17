@@ -71,20 +71,7 @@ export default {
           .attr('class', 'bubble')
           .attr('cx', d => x(d.title_ID) + x.bandwidth() / 2)
           .attr('cy', d => y(d.accuracy))
-          .attr('r', d => r(d.accuracy)/2.5)
-          .on("mouseover", (event, d) => {
-            tooltip.transition()
-              .duration(200)
-              .style("opacity", .9);
-            tooltip.html(\`Question: \${d.title_ID}<br>ID: \${d.student_ID}<br>Accuracy: \${d.accuracy}\`)
-              .style("left", (event.pageX + 5) + "px")
-              .style("top", (event.pageY - 28) + "px");
-          })
-          .on("mouseout", () => {
-            tooltip.transition()
-              .duration(500)
-              .style("opacity", 0);
-          });
+          .attr('r', d => r(d.accuracy)/2.5);
 
         // Uncomment the lines below to add labels
         // svg.selectAll('.label')

@@ -27,13 +27,22 @@ export default {
         { file: "班级12.csv", name: "班4" },
         { file: "班级13.csv", name: "班3" }
       ],
-      colorScheme: ["#87B1FD", "#A7C5FB", "#06D7A0", "#48DCC4", "#A5FBB9"]
+      colorScheme: ["#87B1FD", "#A7C5FB", "#06D7A0", "#48DCC4", "#A5FBB9"],
+      knowledgeOrder: []  // 用于存储统一的知识维度顺序
     };
   },
   mounted() {
-    this.datasets.forEach((dataset, index) => {
-      d3.csv(process.env.BASE_URL + 'data/' + dataset.file).then(data => {
-        this.processData(data, '#chart' + (index + 1), dataset.name);
+    // 读取所有文件，确定知识维度的统一顺序
+    Promise.all(this.datasets.map(dataset => d3.csv(process.env.BASE_URL + 'data/' + dataset.file))).then(files => {
+      const allData = files.flat();
+      const allKnowledge = Array.from(new Set(allData.map(d => d.knowledge)));
+      this.knowledgeOrder = allKnowledge.sort(); // 可以根据需要调整排序方法
+
+      // 处理每个文件的数据
+      this.datasets.forEach((dataset, index) => {
+        d3.csv(process.env.BASE_URL + 'data/' + dataset.file).then(data => {
+          this.processData(data, '#chart' + (index + 1), dataset.name);
+        });
       });
     });
   },
@@ -48,16 +57,17 @@ export default {
         major: value[0].major
       }));
 
+      // 按专业对学生进行分组
       const groupedByMajor = Array.from(d3.group(nestedData, d => d.major), ([key, value]) => ({
         major: key,
         students: value
       }));
 
-      // Create an array of 100 slots
+      // 创建一个长度为 100 的数组
       const fixedGrid = Array(100).fill(null);
       let index = 0;
 
-      // Distribute students into the fixedGrid by major
+      // 按专业分配学生到该数组中
       groupedByMajor.forEach(group => {
         group.students.forEach(student => {
           if (index < 100) {
@@ -68,8 +78,8 @@ export default {
       });
 
       const margin = { top: 0, right: 0, bottom: 0, left: 0 },
-            width = 150 - margin.left - margin.right,
-            height = 150 - margin.top - margin.bottom,
+            width = 120 - margin.left - margin.right,
+            height = 120 - margin.top - margin.bottom,
             radius = Math.min(width, height) / 2;
 
       d3.select(chartID + ' svg').remove();
@@ -85,7 +95,7 @@ export default {
         .range(this.colorScheme);
 
       const arc = d3.arc()
-        .innerRadius(radius * 0.5)
+        .innerRadius(radius * 0.2)
         .outerRadius(radius * 0.7)
         .padAngle(0.02)
         .padRadius(radius * 0.2);
@@ -109,7 +119,7 @@ export default {
       svg.append('text')
         .attr('text-anchor', 'middle')
         .attr('dy', '0.35em')
-        .style('font-size', '8px')
+        .style('font-size', '7px')
         .style('font-weight', 'bold')
         .style('fill', '#000')
         .text(datasetName);
@@ -121,7 +131,19 @@ export default {
         .innerRadius(innerRadius)
         .outerRadius(outerRadius);
 
-      const knowledgeScores = d3.rollups(data, v => d3.sum(v, d => d.score) / v.length, d => d.knowledge);
+      // 找出每个 knowledge 维度内所有题目可能的最高分
+      const maxScores = d3.rollup(data, v => d3.max(v, d => d.score), d => d.knowledge);
+
+      // 计算每个记录的正确率
+      data.forEach(d => {
+        d.correct_rate = d.score / maxScores.get(d.knowledge);
+      });
+
+      // 计算知识分数（正确率），按照统一的顺序排序
+      const knowledgeScores = this.knowledgeOrder.map(k => {
+        const scores = data.filter(d => d.knowledge === k).map(d => d.correct_rate);
+        return [k, d3.mean(scores)];
+      });
 
       const knowledgePie = d3.pie()
         .sort(null)
@@ -142,16 +164,17 @@ export default {
 
       const tooltip = d3.select('#tooltip');
 
+      // 绘制知识分数圆形
       knowledgeG.append('circle')
         .attr('cx', (d, i) => scoreScale(d.data[1]) * Math.cos(2 * Math.PI * i / knowledgeScores.length - Math.PI / 2))
         .attr('cy', (d, i) => scoreScale(d.data[1]) * Math.sin(2 * Math.PI * i / knowledgeScores.length - Math.PI / 2))
-        .attr('r', 3)
+        .attr('r', 2.6)
         .attr('fill', '#6BFF8D')
         .on('mouseover', function(event, d) {
           tooltip.transition()
             .duration(200)
             .style('opacity', .9);
-          tooltip.html(`Knowledge: ${d.data[0]}<br/>Avg Score: ${d.data[1].toFixed(2)}`)
+          tooltip.html(`Knowledge: ${d.data[0]}<br/>Correct Rate: ${(d.data[1] * 100).toFixed(2)}%`)
             .style('left', (event.pageX) + 'px')
             .style('top', (event.pageY - 28) + 'px');
         })
@@ -177,7 +200,8 @@ export default {
   justify-content: space-between;
 }
 .chart {
-  flex: 1 1 49%; 
+  flex: 1 1 49%;
+  box-sizing: border-box;
 }
 .tooltip {
   position: absolute;

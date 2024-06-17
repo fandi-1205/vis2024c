@@ -15,9 +15,10 @@ export default {
 </script>
 
 <style>
+
 .App{
-  width: 300px;
+  width: 240px;
   height: 1100px;
-  background-color: rgb(247, 253, 246);
+  background-color: rgb(255, 255, 255);
 }
 </style>

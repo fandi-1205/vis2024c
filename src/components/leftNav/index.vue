@@ -79,8 +79,8 @@ export default {
       });
 
       const margin = { top: 0, right: 0, bottom: 0, left: 0 },
-        width = 150 - margin.left - margin.right,
-        height = 150 - margin.top - margin.bottom,
+        width = 120 - margin.left - margin.right,
+        height = 120 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;
 
       d3.select(chartID + " svg").remove();
@@ -105,7 +105,7 @@ export default {
 
       const arc = d3
         .arc()
-        .innerRadius(radius * 0.5)
+        .innerRadius(radius * 0.2)
         .outerRadius(radius * 0.7)
         .padAngle(0.02)
         .padRadius(radius * 0.2);
@@ -135,7 +135,7 @@ export default {
         .append("text")
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
-        .style("font-size", "8px")
+        .style("font-size", "7px")
         .style("font-weight", "bold")
         .style("fill", "#000")
         .text(datasetName);

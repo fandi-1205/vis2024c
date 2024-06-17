@@ -120,6 +120,7 @@ export default {
         .attr('text-anchor', 'middle')
         .attr('dy', '0.35em')
         .style('font-size', '7px')
+        .style('font-size', '6px')
         .style('font-weight', 'bold')
         .style('fill', '#000')
         .text(datasetName);
@@ -169,6 +170,7 @@ export default {
         .attr('cx', (d, i) => scoreScale(d.data[1]) * Math.cos(2 * Math.PI * i / knowledgeScores.length - Math.PI / 2))
         .attr('cy', (d, i) => scoreScale(d.data[1]) * Math.sin(2 * Math.PI * i / knowledgeScores.length - Math.PI / 2))
         .attr('r', 2.6)
+        .attr('r', 2.2)
         .attr('fill', '#6BFF8D')
         .on('mouseover', function(event, d) {
           tooltip.transition()

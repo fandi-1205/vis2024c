@@ -31,6 +31,8 @@ export default {
         { file: "班级11.csv", name: "班5" },
         { file: "班级12.csv", name: "班4" },
         { file: "班级13.csv", name: "班3" },
+        { file: "班级12.csv", name: "班2" },
+        { file: "班级13.csv", name: "班1" }
       ],
       colorScheme: ["#87B1FD", "#A7C5FB", "#06D7A0", "#48DCC4", "#A5FBB9"],
     };
@@ -78,9 +80,9 @@ export default {
         });
       });
 
-      const margin = { top: 0, right: 0, bottom: 0, left: 0 },
-        width = 120 - margin.left - margin.right,
-        height = 120 - margin.top - margin.bottom,
+      const margin = { top: 0, right: 0, bottom: -15, left: 0 },
+        width = 80 - margin.left - margin.right,
+        height = 42 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;
 
       d3.select(chartID + " svg").remove();
@@ -108,7 +110,7 @@ export default {
         .innerRadius(radius * 0.2)
         .outerRadius(radius * 0.7)
         .padAngle(0.02)
-        .padRadius(radius * 0.2);
+        .padRadius(radius * 0.1);
 
       const pie = d3
         .pie()
@@ -135,7 +137,7 @@ export default {
         .append("text")
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
-        .style("font-size", "7px")
+        .style("font-size", "4px")
         .style("font-weight", "bold")
         .style("fill", "#000")
         .text(datasetName);
@@ -189,7 +191,7 @@ export default {
             scoreScale(d.data[1]) *
             Math.sin((2 * Math.PI * i) / knowledgeScores.length - Math.PI / 2)
         )
-        .attr("r", 3)
+        .attr("r", 1.5)
         .attr("fill", "#6BFF8D")
         .on("mouseover", function (event, d) {
           tooltip.transition().duration(200).style("opacity", 0.9);

@@ -1,11 +1,11 @@
 <template>
   <div class="layout-container">
-    <div class="layout-column-left">
+    <div class="layout-column-left common">
       <LeftNav></LeftNav>
     </div>
 
     <div class="layout-column-middle">
-      <div class="layout-middle-top">
+      <div class="layout-middle-top common">
         <div class="button-group">
           <button @click="() => sendButtonInfoToBackend('frequency')">
             按次数排序
@@ -18,23 +18,23 @@
           </button>
         </div>
       </div>
-      <div class="layout-middle-middle">
+      <div class="layout-middle-middle common">
         <MainMap :mainMapData="axesData"></MainMap>
       </div>
-      <div class="layout-middle-bottom"></div>
+      <div class="layout-middle-bottom common"></div>
     </div>
 
     <div class="layout-column-right">
       <div class="layout-right-top">
-        <div class="layout-right-top-left"></div>
-        <div class="layout-right-top-right">
+        <div class="layout-right-top-left common"></div>
+        <div class="layout-right-top-right common">
           <HourHeat></HourHeat>
         </div>
       </div>
-      <div class="layout-right-middle">
+      <div class="layout-right-middle common">
         <KnowledgeMasteryVue></KnowledgeMasteryVue>
       </div>
-      <div class="layout-right-bottom">
+      <div class="layout-right-bottom common">
         <div class="layout-right-bottom-left"></div>
         <div class="layout-right-bottom-right"></div>
       </div>
@@ -104,6 +104,10 @@ export default {
 </script>
 
 <style scoped>
+.common {
+  border: 3px solid #cad9f4;
+  border-radius: 10px;
+}
 .button-group {
   display: flex;
   justify-content: center;
@@ -113,7 +117,7 @@ button {
   width: 130px;
   height: 30px;
   border: none;
-  background-color: #3c7df3;
+  background-color: #7099e5;
   color: white;
   border-radius: 10px;
   font-size: 16px;
@@ -121,75 +125,67 @@ button {
   cursor: pointer;
   margin: 5px;
 }
+button:hover {
+  background-color: #316fe2;
+}
 .layout-container {
   display: flex;
+  padding: 5px;
 }
 
 .layout-column-left {
-  /* width: 10%; */
-  border: 1px solid #3c7df3;
-  border-radius: 10px;
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .layout-column-middle {
   display: flex;
   flex-direction: column;
+  margin: 0px 5px;
   /* width: 800px; */
 }
 
 .layout-column-right {
   display: flex;
   flex-direction: column;
-  /* width: 47%; */
 }
 
 .layout-middle-top {
   display: flex;
-  border: 1px solid #3c7df3;
-  margin: 5px;
-  border-radius: 10px;
+  /* margin: 5px; */
 }
 
 .layout-middle-middle {
   flex: 1;
-  border: 1px solid #3c7df3;
-  margin: 5px;
-  border-radius: 10px;
+  margin: 5px 0px;
 }
 
 .layout-middle-bottom {
-  /* height: 12%; */
-  border: 1px solid #3c7df3;
   margin: 5px;
-  border-radius: 10px;
 }
 
 .layout-right-top,
 .layout-right-bottom {
   display: flex;
-  /* margin: 5px; */
 }
 
 .layout-right-middle {
   flex: 1;
-  border: 1px solid #3c7df3;
-  margin: 5px;
-  border-radius: 10px;
+  margin: 5px 0px;
 }
 
 .layout-right-top-left,
 .layout-right-top-right,
 .layout-right-bottom-left,
+.layout-right-top-left,
 .layout-right-bottom-right {
-  flex: 1;
-  border: 1px solid #3c7df3;
-  margin: 5px;
-  border-radius: 10px;
+  /* flex: 1; */
+  /* margin: 5px; */
 }
 
 .layout-right-top-left {
-  flex: 1;
+  /* flex: 1; */
+  width: 100px;
+  margin-right: 5px;
 }
 
 .layout-right-top-right {

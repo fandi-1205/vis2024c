@@ -80,7 +80,7 @@ export default {
         });
       });
 
-      const margin = { top: 15, right: 0, bottom: 5, left: 0 },
+      const margin = { top: 5, right: 0, bottom: -20, left: 0 },
         width = 100 - margin.left - margin.right,
         height = 100 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;

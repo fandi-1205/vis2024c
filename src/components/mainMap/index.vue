@@ -25,7 +25,7 @@ export default {
       return 800 - this.margin.top - this.margin.bottom;
     },
     centerX() {
-      return this.width / 2 - 250;
+      return this.width / 2;
     },
     centerY() {
       return this.height / 2;

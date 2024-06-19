@@ -80,9 +80,9 @@ export default {
         });
       });
 
-      const margin = { top: 0, right: 0, bottom: -15, left: 0 },
-        width = 80 - margin.left - margin.right,
-        height = 42 - margin.top - margin.bottom,
+      const margin = { top: 15, right: 0, bottom: 5, left: 0 },
+        width = 100 - margin.left - margin.right,
+        height = 100 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;
 
       d3.select(chartID + ' svg').remove();
@@ -108,7 +108,7 @@ export default {
       const arc = d3
         .arc()
         .innerRadius(radius * 0.2)
-        .outerRadius(radius * 0.7)
+        .outerRadius(radius * 0.8)
         .padAngle(0.02)
         .padRadius(radius * 0.1);
 
@@ -142,7 +142,7 @@ export default {
         .style('fill', '#000')
         .text(datasetName);
 
-      const innerRadius = radius * 0.23;
+      const innerRadius = radius * 0.2;
       const outerRadius = radius * 0.45;
 
       const knowledgeArc = d3

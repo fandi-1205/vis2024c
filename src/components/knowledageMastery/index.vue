@@ -22,8 +22,8 @@ export default {
     },
     renderChart(learnerData, titleInfoData) {
       // 现有的渲染逻辑保持不变
-      const width = 600;
-      const height = 300;
+      const width = 1200;
+      const height = 600;
 
       const svg = d3
         .select(this.$refs.svg)

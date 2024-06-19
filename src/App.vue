@@ -6,15 +6,17 @@
 
     <div class="layout-column-middle">
       <div class="layout-middle-top">
-        <button @click="() => sendButtonInfoToBackend('frequency')">
-          按次数排序
-        </button>
-        <button @click="() => sendButtonInfoToBackend('accuracy')">
-          按正确率排序
-        </button>
-        <button @click="() => sendButtonInfoToBackend('days')">
-          按天数排序
-        </button>
+        <div class="button-group">
+          <button @click="() => sendButtonInfoToBackend('frequency')">
+            按次数排序
+          </button>
+          <button @click="() => sendButtonInfoToBackend('accuracy')">
+            按正确率排序
+          </button>
+          <button @click="() => sendButtonInfoToBackend('days')">
+            按天数排序
+          </button>
+        </div>
       </div>
       <div class="layout-middle-middle">
         <MainMap :mainMapData="axesData"></MainMap>
@@ -102,12 +104,29 @@ export default {
 </script>
 
 <style scoped>
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 130px;
+  height: 30px;
+  border: none;
+  background-color: #3c7df3;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  margin: 5px;
+}
 .layout-container {
   display: flex;
 }
 
 .layout-column-left {
-  width: 6%;
+  /* width: 10%; */
   border: 1px solid #3c7df3;
   border-radius: 10px;
   margin: 5px;
@@ -116,17 +135,17 @@ export default {
 .layout-column-middle {
   display: flex;
   flex-direction: column;
-  width: 47%;
+  /* width: 800px; */
 }
 
 .layout-column-right {
   display: flex;
   flex-direction: column;
-  width: 47%;
+  /* width: 47%; */
 }
 
 .layout-middle-top {
-  height: 200px;
+  display: flex;
   border: 1px solid #3c7df3;
   margin: 5px;
   border-radius: 10px;
@@ -140,7 +159,7 @@ export default {
 }
 
 .layout-middle-bottom {
-  height: 12%;
+  /* height: 12%; */
   border: 1px solid #3c7df3;
   margin: 5px;
   border-radius: 10px;
@@ -149,7 +168,6 @@ export default {
 .layout-right-top,
 .layout-right-bottom {
   display: flex;
-  flex: 1;
   /* margin: 5px; */
 }
 

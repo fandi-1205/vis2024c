@@ -17,8 +17,8 @@ export default {
     drawHeatmap() {
       // Set dimensions and margins
       const margin = { top: 20, right: 0, bottom: 30, left: 50 },
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom,
+        width = 1000 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom,
         gridSize = Math.floor(width / 24),
         colors = [
           '#ffffd9',

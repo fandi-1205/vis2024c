@@ -11,36 +11,36 @@
 </template>
 
 <script>
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 export default {
-  name: "RightNav",
+  name: 'RightNav',
   data() {
     return {
       datasets: [
-        { file: "班级15.csv", name: "班15" },
-        { file: "班级14.csv", name: "班14" },
-        { file: "班级1.csv", name: "班13" },
-        { file: "班级4.csv", name: "班12" },
-        { file: "班级5.csv", name: "班11" },
-        { file: "班级6.csv", name: "班10" },
-        { file: "班级7.csv", name: "班9" },
-        { file: "班级8.csv", name: "班8" },
-        { file: "班级9.csv", name: "班7" },
-        { file: "班级10.csv", name: "班6" },
-        { file: "班级11.csv", name: "班5" },
-        { file: "班级12.csv", name: "班4" },
-        { file: "班级13.csv", name: "班3" },
-        { file: "班级12.csv", name: "班2" },
-        { file: "班级13.csv", name: "班1" }
+        { file: '班级15.csv', name: '班15' },
+        { file: '班级14.csv', name: '班14' },
+        { file: '班级1.csv', name: '班13' },
+        { file: '班级4.csv', name: '班12' },
+        { file: '班级5.csv', name: '班11' },
+        { file: '班级6.csv', name: '班10' },
+        { file: '班级7.csv', name: '班9' },
+        { file: '班级8.csv', name: '班8' },
+        { file: '班级9.csv', name: '班7' },
+        { file: '班级10.csv', name: '班6' },
+        { file: '班级11.csv', name: '班5' },
+        { file: '班级12.csv', name: '班4' },
+        { file: '班级13.csv', name: '班3' },
+        { file: '班级12.csv', name: '班2' },
+        { file: '班级13.csv', name: '班1' },
       ],
-      colorScheme: ["#87B1FD", "#A7C5FB", "#06D7A0", "#48DCC4", "#A5FBB9"],
+      colorScheme: ['#87B1FD', '#A7C5FB', '#06D7A0', '#48DCC4', '#A5FBB9'],
     };
   },
   mounted() {
     this.datasets.forEach((dataset, index) => {
-      d3.csv(process.env.BASE_URL + "data/" + dataset.file).then((data) => {
-        this.processData(data, "#chart" + (index + 1), dataset.name);
+      d3.csv(process.env.BASE_URL + 'data/' + dataset.file).then((data) => {
+        this.processData(data, '#chart' + (index + 1), dataset.name);
       });
     });
   },
@@ -85,16 +85,16 @@ export default {
         height = 42 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;
 
-      d3.select(chartID + " svg").remove();
+      d3.select(chartID + ' svg').remove();
 
       const svg = d3
         .select(chartID)
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
+        .append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
         .attr(
-          "transform",
+          'transform',
           `translate(${(width + margin.left + margin.right) / 2},${
             (height + margin.top + margin.bottom) / 2
           })`
@@ -102,7 +102,7 @@ export default {
 
       const color = d3
         .scaleOrdinal()
-        .domain(fixedGrid.map((d) => (d ? d.major : "")))
+        .domain(fixedGrid.map((d) => (d ? d.major : '')))
         .range(this.colorScheme);
 
       const arc = d3
@@ -118,28 +118,28 @@ export default {
         .value(() => 1);
 
       const g = svg
-        .selectAll(".arc")
+        .selectAll('.arc')
         .data(pie(fixedGrid))
         .enter()
-        .append("g")
-        .attr("class", "arc");
+        .append('g')
+        .attr('class', 'arc');
 
-      g.append("path")
-        .attr("d", arc)
-        .attr("fill", (d) => (d.data ? color(d.data.major) : "none")) // 设置为空格子的颜色为 'none'
-        .attr("stroke", "none")
-        .append("title")
+      g.append('path')
+        .attr('d', arc)
+        .attr('fill', (d) => (d.data ? color(d.data.major) : 'none')) // 设置为空格子的颜色为 'none'
+        .attr('stroke', 'none')
+        .append('title')
         .text((d) =>
-          d.data ? `学生ID: ${d.data.student_ID}\n专业: ${d.data.major}` : ""
+          d.data ? `学生ID: ${d.data.student_ID}\n专业: ${d.data.major}` : ''
         );
 
       svg
-        .append("text")
-        .attr("text-anchor", "middle")
-        .attr("dy", "0.35em")
-        .style("font-size", "4px")
-        .style("font-weight", "bold")
-        .style("fill", "#000")
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dy', '0.35em')
+        .style('font-size', '4px')
+        .style('font-weight', 'bold')
+        .style('fill', '#000')
         .text(datasetName);
 
       const innerRadius = radius * 0.23;
@@ -162,48 +162,48 @@ export default {
         .value(() => 1);
 
       const knowledgeG = svg
-        .selectAll(".knowledge-arc")
+        .selectAll('.knowledge-arc')
         .data(knowledgePie(knowledgeScores))
         .enter()
-        .append("g")
-        .attr("class", "knowledge-arc");
+        .append('g')
+        .attr('class', 'knowledge-arc');
 
-      knowledgeG.append("path").attr("d", knowledgeArc).attr("fill", "#EDEDED");
+      knowledgeG.append('path').attr('d', knowledgeArc).attr('fill', '#EDEDED');
 
       const scoreScale = d3
         .scaleLinear()
         .domain([0, d3.max(knowledgeScores, (d) => d[1])])
         .range([innerRadius, outerRadius]);
 
-      const tooltip = d3.select("#tooltip");
+      const tooltip = d3.select('#tooltip');
 
       knowledgeG
-        .append("circle")
+        .append('circle')
         .attr(
-          "cx",
+          'cx',
           (d, i) =>
             scoreScale(d.data[1]) *
             Math.cos((2 * Math.PI * i) / knowledgeScores.length - Math.PI / 2)
         )
         .attr(
-          "cy",
+          'cy',
           (d, i) =>
             scoreScale(d.data[1]) *
             Math.sin((2 * Math.PI * i) / knowledgeScores.length - Math.PI / 2)
         )
-        .attr("r", 1.5)
-        .attr("fill", "#6BFF8D")
-        .on("mouseover", function (event, d) {
-          tooltip.transition().duration(200).style("opacity", 0.9);
+        .attr('r', 1.5)
+        .attr('fill', '#6BFF8D')
+        .on('mouseover', function (event, d) {
+          tooltip.transition().duration(200).style('opacity', 0.9);
           tooltip
             .html(
               `Knowledge: ${d.data[0]}<br/>Avg Score: ${d.data[1].toFixed(2)}`
             )
-            .style("left", event.pageX + "px")
-            .style("top", event.pageY - 28 + "px");
+            .style('left', event.pageX + 'px')
+            .style('top', event.pageY - 28 + 'px');
         })
-        .on("mouseout", function () {
-          tooltip.transition().duration(500).style("opacity", 0);
+        .on('mouseout', function () {
+          tooltip.transition().duration(500).style('opacity', 0);
         });
     },
   },
@@ -218,7 +218,7 @@ export default {
 }
 .chart-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
 }
 .chart {

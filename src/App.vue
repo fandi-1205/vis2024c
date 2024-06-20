@@ -35,8 +35,10 @@
         <KnowledgeMasteryVue></KnowledgeMasteryVue>
       </div>
       <div class="layout-right-bottom common">
-        <div class="layout-right-bottom-left"></div>
-        <div class="layout-right-bottom-right"></div>
+        <StudyOrder></StudyOrder>
+
+        <!-- <div class="layout-right-bottom-left"></div>
+        <div class="layout-right-bottom-right"></div> -->
       </div>
     </div>
   </div>
@@ -47,6 +49,7 @@ import MainMap from './components/mainMap';
 import LeftNav from './components/leftNav/';
 import KnowledgeMasteryVue from './components/knowledageMastery/';
 import HourHeat from './components/hourHeat/';
+import StudyOrder from './components/studyOrder/';
 import axios from 'axios';
 
 export default {
@@ -56,6 +59,7 @@ export default {
     MainMap,
     KnowledgeMasteryVue,
     HourHeat,
+    StudyOrder,
   },
   data() {
     return {

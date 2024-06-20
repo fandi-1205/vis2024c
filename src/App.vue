@@ -4,7 +4,9 @@
       <LeftNav></LeftNav>
     </div>
 
+
     <div class="layout-column-middle">
+
       <div class="layout-middle-top common">
         <div class="button-group">
           <button @click="() => sendButtonInfoToBackend('frequency')">
@@ -18,29 +20,43 @@
           </button>
         </div>
       </div>
+
       <div class="layout-middle-middle common">
         <MainMap :mainMapData="axesData"></MainMap>
       </div>
+
       <div class="layout-middle-bottom common"></div>
     </div>
 
+    
     <div class="layout-column-right">
       <div class="layout-right-top">
+
         <div class="layout-right-top-left common"></div>
+
         <div class="layout-right-top-right common">
           <HourHeat></HourHeat>
         </div>
       </div>
+
       <div class="layout-right-middle common">
         <KnowledgeMasteryVue></KnowledgeMasteryVue>
       </div>
+
       <div class="layout-right-bottom common">
         <div class="layout-right-bottom-left"></div>
         <div class="layout-right-bottom-right"></div>
       </div>
+
     </div>
   </div>
 </template>
+
+
+
+
+
+
 
 <script>
 import MainMap from './components/mainMap';
@@ -108,6 +124,7 @@ export default {
   border: 3px solid #cad9f4;
   border-radius: 10px;
 }
+
 .button-group {
   display: flex;
   justify-content: center;
@@ -128,67 +145,96 @@ button {
 button:hover {
   background-color: #316fe2;
 }
+
+
+
+
 .layout-container {
   display: flex;
-  padding: 5px;
+  height: 100vh;
+ 
+ 
 }
 
 .layout-column-left {
-  /* margin: 5px; */
+  margin: 5px;
+  width: 7%;
+  border-radius: 10px;
+
 }
 
 .layout-column-middle {
   display: flex;
   flex-direction: column;
-  margin: 0px 5px;
-  /* width: 800px; */
+  width: 47%;
+ 
 }
 
 .layout-column-right {
   display: flex;
   flex-direction: column;
+  width: 46%;
+
 }
 
 .layout-middle-top {
   display: flex;
-  /* margin: 5px; */
+  margin: 5px;
+  height: 6%;
 }
 
 .layout-middle-middle {
   flex: 1;
-  margin: 5px 0px;
+  margin: 5px;
 }
 
 .layout-middle-bottom {
   margin: 5px;
+  height: 10%;
 }
+
+
+
+
 
 .layout-right-top,
 .layout-right-bottom {
   display: flex;
+  flex: 1;
+  /* margin: 5px; */
 }
 
 .layout-right-middle {
   flex: 1;
-  margin: 5px 0px;
+  border: 3px solid #cad9f4;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 .layout-right-top-left,
 .layout-right-top-right,
 .layout-right-bottom-left,
-.layout-right-top-left,
 .layout-right-bottom-right {
-  /* flex: 1; */
-  /* margin: 5px; */
+  flex: 1;
+  border: 3px solid #cad9f4;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 .layout-right-top-left {
-  /* flex: 1; */
-  width: 100px;
-  margin-right: 5px;
+  flex: 1;
 }
 
 .layout-right-top-right {
-  flex: 2;
+  flex: 2; 
 }
+
+
 </style>
+
+
+
+
+
+
+

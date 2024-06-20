@@ -21,7 +21,9 @@
       <div class="layout-middle-middle common">
         <MainMap :mainMapData="axesData"></MainMap>
       </div>
-      <div class="layout-middle-bottom common"></div>
+      <div class="layout-middle-bottom common">
+        <ProgressChart></ProgressChart>
+      </div>
     </div>
 
     <div class="layout-column-right">
@@ -50,6 +52,7 @@ import LeftNav from './components/leftNav/';
 import KnowledgeMasteryVue from './components/knowledageMastery/';
 import HourHeat from './components/hourHeat/';
 import StudyOrder from './components/studyOrder/';
+import ProgressChart from './components/progressChart/';
 import axios from 'axios';
 
 export default {
@@ -60,6 +63,7 @@ export default {
     KnowledgeMasteryVue,
     HourHeat,
     StudyOrder,
+    ProgressChart,
   },
   data() {
     return {

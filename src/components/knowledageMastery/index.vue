@@ -22,8 +22,8 @@ export default {
     },
     renderChart(learnerData, titleInfoData) {
       // 现有的渲染逻辑保持不变
-      const width = 1200;
-      const height = 600;
+      const width = 1600;
+      const height = 300;
 
       const svg = d3
         .select(this.$refs.svg)
@@ -136,7 +136,7 @@ export default {
       let radiusScale = d3
         .scaleSqrt()
         .domain([0, d3.max(knowledgeData, (d) => d.count)])
-        .range([80, 240]);
+        .range([32, 96]);
 
       let subRadiusScale = d3
         .scaleSqrt()
@@ -146,7 +146,7 @@ export default {
             d3.max(d.subKnowledgeData, (sk) => sk.count)
           ),
         ])
-        .range([60, 105]);
+        .range([24, 42]);
 
       let tinyRadiusScale = d3
         .scaleSqrt()
@@ -158,7 +158,7 @@ export default {
             )
           ),
         ])
-        .range([10, 45]);
+        .range([4, 18]);
 
       let g = svg
         .selectAll('g')
@@ -167,7 +167,7 @@ export default {
         .append('g')
         .attr(
           'transform',
-          (d, i) => `translate(${i * 480 + 240}, ${height / 2})`
+          (d, i) => `translate(${i * 200 + 120}, ${height / 2})`
         );
 
       g.append('circle')
@@ -177,12 +177,16 @@ export default {
 
       g.append('text')
         .attr('class', 'accuracy-label')
+        .style('font-size', '10px') /* 确保字体大小已更新 */
         .attr('dy', (d) => -radiusScale(d.count) * 0.8)
         .text((d) => (d.accuracy * 100).toFixed(1) + '%');
 
       g.append('text')
         .attr('class', 'knowledge-label')
-        .attr('y', (d) => -radiusScale(d.count) - 20)
+        .attr('text-anchor', 'middle') // 居中对齐
+        .attr('dominant-baseline', 'middle') // 垂直居中对齐
+        .attr('y', -110)
+        .style('font-size', '15px') /* 确保字体大小已更新 */
         .text((d) => d.knowledge);
 
       g.each(function (d) {
@@ -219,6 +223,8 @@ export default {
         subG
           .append('text')
           .attr('class', 'sub-accuracy-label')
+          .attr('dy', (sk) => -subRadiusScale(sk.count) * 1.2) /* 调整位置 */
+          .style('font-size', '8px') /* 确保字体大小已更新 */
           .attr('dy', (sk) => -subRadiusScale(sk.count) * -1)
           .text((sk) => (sk.accuracy * 100).toFixed(1) + '%');
 
@@ -249,7 +255,7 @@ export default {
             .attr('fill', '#7CE9B5')
             .style('fill-opacity', (t) => t.accuracy)
             .style('stroke', '#FF4975')
-            .style('stroke-width', (t) => (t.accuracy < 0.1 ? 5 : 0))
+            .style('stroke-width', (t) => (t.accuracy < 0.1 ? 2 : 0))
             .style('stroke-opacity', 0.8)
             .on('mouseover', function (event, t) {
               d3.select(this)
@@ -258,7 +264,7 @@ export default {
 
               tooltip.transition().duration(200).style('opacity', 0.9);
               tooltip
-                .html(t.title_ID)
+                .html(`题目: ${t.title_ID}<br>答题次数: ${t.count}`) // 显示题目ID和答题次数
                 .style('left', event.pageX + 5 + 'px')
                 .style('top', event.pageY - 28 + 'px');
             })
@@ -268,6 +274,16 @@ export default {
                 .style('fill-opacity', t.accuracy);
               tooltip.transition().duration(500).style('opacity', 0);
             });
+
+          // 添加文本元素显示正确率
+          tinyG
+            .append('text')
+            .attr('class', 'tiny-circle-text')
+            .attr('dy', '.35em')
+            .attr('text-anchor', 'middle')
+            .text((t) => (t.accuracy * 100).toFixed(1) + '%')
+            .style('font-size', '4px')  // 设置文本大小
+            .style('fill', '#000');  // 设置文本颜色
 
           d3.forceSimulation(sk.titles)
             .force('charge', d3.forceManyBody().strength(2))
@@ -290,27 +306,52 @@ export default {
 </script>
 
 <style scoped>
-.accuracy-label,
-.sub-accuracy-label {
-  font-size: 15px;
+svg .accuracy-label {
+  font-size: 10px !important; /* 确保字体大小已更新 */
   font-weight: bold;
   fill: #000;
 }
-.knowledge-label {
-  font-size: 30px;
+
+svg .sub-accuracy-label {
+  font-size: 10px !important; /* 确保字体大小已更新 */
+  font-weight: bold;
+  fill: #000;
+}
+
+svg .knowledge-label {
+  font-size: 5px !important; /* 确保字体大小已更新 */
   font-weight: bold;
   fill: #be74fc;
 }
+
+svg .tiny-circle-text {
+  font-size: 10px !important; /* 确保字体大小已更新 */
+  fill: #000;  /* 设置文本颜色 */
+}
+
+svg .tiny-circle-text-sub {
+  font-size: 10px !important; /* 确保字体大小已更新 */
+  fill: #000;  /* 设置文本颜色 */
+}
+
+svg .tiny-circle-text-knowledge {
+  font-size: 10px !important; /* 确保字体大小已更新 */
+  fill: #be74fc;  /* 设置文本颜色 */
+}
+
 .tooltip {
   position: absolute;
   text-align: center;
-  width: 60px;
-  height: 28px;
-  padding: 2px;
-  font: 12px sans-serif;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  font: 8px sans-serif !important; /* 确保字体大小已更新 */
   background: lightsteelblue;
-  border: 0px;
+  border: 0px solid #000;
   border-radius: 8px;
   pointer-events: none;
+  font-size: 8px; /* 设置悬浮框中文本的大小 */
 }
 </style>
+
+

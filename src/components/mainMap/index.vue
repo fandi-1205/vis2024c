@@ -19,10 +19,10 @@ export default {
   },
   computed: {
     width() {
-      return 800 - this.margin.left - this.margin.right;
+      return 1000 - this.margin.left - this.margin.right;
     },
     height() {
-      return 800 - this.margin.top - this.margin.bottom;
+      return 1000 - this.margin.top - this.margin.bottom;
     },
     centerX() {
       return this.width / 2;
@@ -56,21 +56,6 @@ export default {
   mounted() {},
 
   methods: {
-    // fetchDataAndRenderChart() {
-    //   axios
-    //     .get('http://127.0.0.1:3001/student2')
-    //     .then((response) => {
-    //       this.mainMapData = response.data;
-    //       console.log(this.mainMapData);
-
-    //       this.renderChart();
-
-    //       // this.generateAxes(response);
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // },
     renderChart() {
       const chartWidth = this.width + this.margin.left + this.margin.right;
       const chartHeight = this.height + this.margin.top + this.margin.bottom;
@@ -87,16 +72,12 @@ export default {
         .attr('height', chartHeight);
 
       this.container = svg.append('g');
-      this.zoom = d3.zoom().scaleExtent([0.01, 5]).on('zoom', this.zoomed);
+      this.zoom = d3.zoom().scaleExtent([0.3, 10]).on('zoom', this.zoomed);
       svg
         .call(this.zoom)
         .transition()
         .duration(500)
         .call(this.zoom.scaleTo, this.initialScale);
-
-      // const initialTransform = d3.zoomIdentity.translate(centerX - 200, centerY - 200).scale(0.2);
-      // this.container.attr('transform', initialTransform);
-
       const minVal = 0;
       const maxVal = 1;
 
@@ -188,7 +169,7 @@ export default {
           .attr('x2', RectPositionX)
           .attr('y2', RectPositionY)
           .attr('stroke', '#00FFFF')
-          .attr('stroke-width', 1);
+          .attr('stroke-width', 2);
         // .attr("opacity", 0.5)
         // .attr("stroke-dasharray", "5, 5");
 

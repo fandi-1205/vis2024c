@@ -220,7 +220,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  /* height: 200vh; */
   overflow-y: auto; /* Add vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar if not needed */
 }
@@ -241,21 +241,20 @@ export default {
   opacity: 0;
 }
 
-
 .chart-container::-webkit-scrollbar {
   width: 3px; /* Adjust width for vertical scrollbar */
 }
 
 .chart-container::-webkit-scrollbar-thumb {
-  background: #e2e2e2; 
+  background: #e2e2e2;
   border-radius: 10px; /* Make the scrollbar rounded */
 }
 
 .chart-container::-webkit-scrollbar-thumb:hover {
-  background: #a9a9a9; 
+  background: #a9a9a9;
 }
 
 .chart-container::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
 </style>

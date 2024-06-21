@@ -235,7 +235,7 @@ export default {
 }
 .container {
   overflow-y: auto;
-  height: 500px;
+  height: 1000px;
   width: 100%;
 }
 .svg-container {

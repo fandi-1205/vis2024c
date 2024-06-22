@@ -4,7 +4,6 @@
 
 <script>
 import * as d3 from 'd3';
-// import data from 'cumulative_average_scores.json';
 
 export default {
   name: 'CumulativeAverageScoreChart',
@@ -99,7 +98,8 @@ export default {
         .attr('y', height - margin.bottom)
         .attr('class', 'axis-label')
         .style('text-anchor', 'middle')
-        .text('Submission Times');
+        .text('Submission Times')
+        .attr('dy', '16px');
 
       svg
         .append('text')
@@ -109,7 +109,8 @@ export default {
         .attr('dy', '1em')
         .attr('class', 'axis-label')
         .style('text-anchor', 'middle')
-        .text('Cumulative Average Score');
+        .text('Cumulative Average Score')
+        .attr('dy', '30px');
     },
   },
 };

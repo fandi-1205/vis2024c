@@ -246,7 +246,7 @@ export default {
   display: flex;
   justify-content: space-between;
   gap: 3px;
-  width: 1600px; /* Set the desired container width */
+  width: 1400px; /* Set the desired container width */
   height: 600px; /* Set the desired container height */
   overflow-y: scroll; /* Enable vertical scrolling */
   border: 1px solid #ccc; /* Add a border for visual reference */
@@ -254,7 +254,7 @@ export default {
 }
 
 .column {
-  width: 50%;
+  width: 55%;
   /* overflow-y: auto;  Remove this line */
 }
 

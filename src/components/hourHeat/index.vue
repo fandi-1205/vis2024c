@@ -125,7 +125,7 @@ export default {
   /* font-weight: bold; */
 }
 #heatmap-container {
-  width: 1200px; /* Set the desired container width */
+  width: 950px; /* Set the desired container width */
   height: 300px; /* Set the desired container height */
   overflow-y: scroll; /* Enable vertical scrolling if needed */
   border: 1px solid #ccc; /* Add a border for visual reference */

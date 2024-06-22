@@ -27,11 +27,11 @@ export default {
 
       const margin = { top: 20, right: 20, bottom: 100, left: 40 },
         width = 960 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        height = 450 - margin.top - margin.bottom;
 
       const x = d3
         .scaleBand()
-        .domain(data.map((d) => d.student_ID))
+        .domain(data.map((d) => d.rank))
         .range([0, width])
         .padding(0.1);
 
@@ -62,9 +62,9 @@ export default {
         .enter()
         .append('line')
         .attr('class', 'line')
-        .attr('x1', (d) => x(d.student_ID) + x.bandwidth() / 2)
+        .attr('x1', (d) => x(d.rank) + x.bandwidth() / 2)
         .attr('y1', y(0))
-        .attr('x2', (d) => x(d.student_ID) + x.bandwidth() / 2)
+        .attr('x2', (d) => x(d.rank) + x.bandwidth() / 2)
         .attr('y2', (d) => y(d.question_avg_score));
 
       svg
@@ -75,7 +75,7 @@ export default {
         .append('circle')
         .attr('class', 'dot')
         .attr('r', 6)
-        .attr('cx', (d) => x(d.student_ID) + x.bandwidth() / 2)
+        .attr('cx', (d) => x(d.rank) + x.bandwidth() / 2)
         .attr('cy', y(0))
         .transition()
         .duration(1000)
@@ -89,7 +89,7 @@ export default {
         .append('circle')
         .attr('class', 'dot-inner')
         .attr('r', (d) => Math.sqrt(d.question_3MwAFlmNO8EKrpY5zjUd_count))
-        .attr('cx', (d) => x(d.student_ID) + x.bandwidth() / 2)
+        .attr('cx', (d) => x(d.rank) + x.bandwidth() / 2)
         .attr('cy', (d) => y(d.question_avg_score))
         .on('mouseover', function (event, d) {
           tooltip.transition().duration(200).style('opacity', 0.9);
@@ -110,10 +110,10 @@ export default {
         .attr('transform', `translate(0,${height})`)
         .call(d3.axisBottom(x))
         .selectAll('text')
-        .attr('transform', 'rotate(-90)')
         .style('text-anchor', 'end')
-        .attr('dx', '-.8em')
-        .attr('dy', '.15em');
+        .style("font-size", "8px")
+        .attr('dx', '2px')
+        .attr('dy', '6px');
 
       svg.append('g').attr('class', 'y axis').call(d3.axisLeft(y));
     });
@@ -131,14 +131,14 @@ export default {
   shape-rendering: crispEdges;
 }
 .dot {
-  fill: #3c7df3;
+  fill: #81a3e3;
 }
 .dot-inner {
-  fill: #ffa360;
+  fill: #76f0b5;
 }
 .line {
-  stroke: black;
-  stroke-width: 1px;
+  stroke: rgb(210, 210, 210);
+  stroke-width: 0.9px;
 }
 .tooltip {
   position: absolute;

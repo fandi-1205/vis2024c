@@ -200,4 +200,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+#mainChart {
+  width: 100%;
+  height: 100%;
+}
+</style>

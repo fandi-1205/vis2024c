@@ -246,8 +246,8 @@ export default {
   display: flex;
   justify-content: space-between;
   gap: 3px;
-  width: 1600px; /* Set the desired container width */
-  height: 600px; /* Set the desired container height */
+  width: 1800px; /* Set the desired container width */
+  height: 440px; /* Set the desired container height */
   overflow-y: scroll; /* Enable vertical scrolling */
   border: 1px solid #ccc; /* Add a border for visual reference */
   padding: 10px;

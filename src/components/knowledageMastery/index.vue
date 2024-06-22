@@ -14,6 +14,7 @@ export default {
     return {
       width: 1600,
       height: 300,
+     
     };
   },
   mounted() {
@@ -281,6 +282,11 @@ export default {
 <style scoped>
 #knowledge-mastery {
   position: relative;
+  width: 100%;
+  height: 700px;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  /* 横向禁止滚动 */
+  overflow-x: hidden;
 }
 
 .tooltip {

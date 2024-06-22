@@ -137,7 +137,7 @@ export default {
         .append('text')
         .attr('text-anchor', 'middle')
         .attr('dy', '0.35em')
-        .style('font-size', '4px')
+        .style('font-size', '5px')
         .style('font-weight', 'bold')
         .style('fill', '#000')
         .text(datasetName);
@@ -192,7 +192,7 @@ export default {
             Math.sin((2 * Math.PI * i) / knowledgeScores.length - Math.PI / 2)
         )
         .attr('r', 1.5)
-        .attr('fill', '#6BFF8D')
+        .attr('fill', '#FB8DB2')
         .on('mouseover', function (event, d) {
           tooltip.transition().duration(200).style('opacity', 0.9);
           tooltip
@@ -220,6 +220,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* height: 200vh; */
+  overflow-y: auto; /* Add vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar if not needed */
 }
 .chart {
   flex: 1 1 49%;
@@ -236,5 +239,22 @@ export default {
   border-radius: 8px;
   pointer-events: none;
   opacity: 0;
+}
+
+.chart-container::-webkit-scrollbar {
+  width: 3px; /* Adjust width for vertical scrollbar */
+}
+
+.chart-container::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 10px; /* Make the scrollbar rounded */
+}
+
+.chart-container::-webkit-scrollbar-thumb:hover {
+  background: #a9a9a9;
+}
+
+.chart-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 </style>

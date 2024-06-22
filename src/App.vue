@@ -1,44 +1,56 @@
 <template>
-  <div class="layout-container">
-    <div class="layout-column-left common">
-      <LeftNav></LeftNav>
-    </div>
+  <div>
+    <TopNav></TopNav>
+    <div class="layout-container">
+      <div class="layout-column-left common">
+        <LeftNav></LeftNav>
+      </div>
 
-    <div class="layout-column-middle">
-      <div class="layout-middle-top common">
-        <div class="button-group">
-          <button @click="() => sendButtonInfoToBackend('frequency')">
-            按次数排序
-          </button>
-          <button @click="() => sendButtonInfoToBackend('accuracy')">
-            按正确率排序
-          </button>
-          <button @click="() => sendButtonInfoToBackend('days')">
-            按天数排序
-          </button>
+      <div class="layout-column-middle">
+        <div class="layout-middle-top common">
+          <div class="button-group">
+            <button @click="() => sendButtonInfoToBackend('frequency')">
+              按次数排序
+            </button>
+            <button @click="() => sendButtonInfoToBackend('accuracy')">
+              按正确率排序
+            </button>
+            <button @click="() => sendButtonInfoToBackend('days')">
+              按天数排序
+            </button>
+          </div>
+        </div>
+
+        <div class="layout-middle-middle common">
+          <MainMap :mainMapData="axesData"></MainMap>
+        </div>
+
+        <div class="layout-middle-bottom common">
+          <ProgressChart></ProgressChart>
         </div>
       </div>
-      <div class="layout-middle-middle common">
-        <MainMap :mainMapData="axesData"></MainMap>
-      </div>
-      <div class="layout-middle-bottom common"></div>
-    </div>
 
-    <div class="layout-column-right">
-      <div class="layout-right-top">
-        <div class="layout-right-top-left common"></div>
-        <div class="layout-right-top-right common">
-          <HourHeat></HourHeat>
+      <div class="layout-column-right">
+        <div class="layout-right-top">
+          <div class="layout-right-top-left common">
+            <StudentScores></StudentScores>
+          </div>
+
+          <div class="layout-right-top-right common">
+            <HourHeat></HourHeat>
+          </div>
         </div>
-      </div>
-      <div class="layout-right-middle common">
-        <KnowledgeMasteryVue></KnowledgeMasteryVue>
-      </div>
-      <div class="layout-right-bottom common">
-        <StudyOrder></StudyOrder>
 
-        <!-- <div class="layout-right-bottom-left"></div>
+        <div class="layout-right-middle common">
+          <KnowledgeMasteryVue></KnowledgeMasteryVue>
+        </div>
+
+        <div class="layout-right-bottom common">
+          <StudyOrder></StudyOrder>
+
+          <!-- <div class="layout-right-bottom-left"></div>
         <div class="layout-right-bottom-right"></div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -50,16 +62,22 @@ import LeftNav from './components/leftNav/';
 import KnowledgeMasteryVue from './components/knowledageMastery/';
 import HourHeat from './components/hourHeat/';
 import StudyOrder from './components/studyOrder/';
+import ProgressChart from './components/progressChart/';
+import StudentScores from './components/studentScores/';
+import TopNav from './components/topNav/';
 import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
+    TopNav,
     LeftNav,
     MainMap,
     KnowledgeMasteryVue,
     HourHeat,
     StudyOrder,
+    ProgressChart,
+    StudentScores,
   },
   data() {
     return {
@@ -94,8 +112,6 @@ export default {
           .then((response) => {
             this.axesData = response.data;
             console.log(this.mainMapData);
-            // this.renderChart();
-            // this.generateAxes(response);
           })
           .catch((error) => {
             console.log(error);
@@ -112,11 +128,13 @@ export default {
   border: 3px solid #cad9f4;
   border-radius: 10px;
 }
+
 .button-group {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 button {
   width: 130px;
   height: 30px;
@@ -135,10 +153,11 @@ button:hover {
 .layout-container {
   display: flex;
   padding: 5px;
+  margin-top: 65px;
 }
 
 .layout-column-left {
-  /* margin: 5px; */
+  margin: 5px;
 }
 
 .layout-column-middle {
@@ -155,41 +174,47 @@ button:hover {
 
 .layout-middle-top {
   display: flex;
-  /* margin: 5px; */
+  margin: 5px;
+  /* height: 6%; */
 }
 
 .layout-middle-middle {
   flex: 1;
-  margin: 5px 0px;
+  margin: 5px;
+  /* height: 1000px; */
 }
 
 .layout-middle-bottom {
   margin: 5px;
+  /* height: 10%; */
 }
 
 .layout-right-top,
 .layout-right-bottom {
   display: flex;
+  /* flex: 1; */
+  /* margin: 5px; */
 }
 
 .layout-right-middle {
-  flex: 1;
-  margin: 5px 0px;
+  /* flex: 1; */
+  border: 3px solid #cad9f4;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 .layout-right-top-left,
 .layout-right-top-right,
 .layout-right-bottom-left,
-.layout-right-top-left,
 .layout-right-bottom-right {
   /* flex: 1; */
-  /* margin: 5px; */
+  border: 3px solid #cad9f4;
+  margin: 5px;
+  border-radius: 10px;
 }
 
 .layout-right-top-left {
-  /* flex: 1; */
-  width: 100px;
-  margin-right: 5px;
+  flex: 1;
 }
 
 .layout-right-top-right {

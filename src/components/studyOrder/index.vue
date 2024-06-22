@@ -46,7 +46,8 @@ export default {
             .append('div')
             .attr('x', 0)
             .attr('y', 20)
-            .style('font-size', '14px')
+            .style('font-size', '15px')
+            .style('font-weight', 'bold')
             .text(`Student ID: ${studentId}`);
 
           const svg = svgContainer
@@ -216,6 +217,7 @@ export default {
             .attr('x', (d) => d.x)
             .attr('y', (d) => d.y + 30)
             .attr('text-anchor', 'middle')
+            .style('font-size', '15px')
             .text((d) => d.id);
         });
       })

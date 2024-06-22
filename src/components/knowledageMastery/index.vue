@@ -191,17 +191,17 @@ export default {
             .select(this.$refs.chart)
             .append('svg')
             .attr('width', width)
-            .attr('height', height + 20);
+            .attr('height', height + 10);
 
           svg
             .append('text')
             .attr('class', 'student-title')
             .attr('x', 150)
-            .attr('y', 50)
+            .attr('y', 35)
             .attr('text-anchor', 'middle')
             .style('font-size', '15px')
             .style('font-weight', 'bold')
-            .text(`StudentID: ${studentID}`);
+            .text(`Student ID: ${studentID}`);
 
           let g = svg
             .selectAll('.knowledge-g')

@@ -28,7 +28,7 @@ export default {
       }
       const width = 700;
       const height = 340;
-      const margin = { top: 20, right: 30, bottom: 50, left: 60 };
+      const margin = { top: 20, right: 30, bottom: 50, left: 45 };
 
       const svg = d3
         .select('#chart')
@@ -64,9 +64,9 @@ export default {
           'transform',
           `translate(0,${height - margin.top - margin.bottom})`
         )
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x).tickSize(0).tickPadding(10));
 
-      svg.append('g').call(d3.axisLeft(y));
+        svg.append('g').call(d3.axisLeft(y).tickSize(0).tickPadding(10));
 
       // const color = d3.scaleOrdinal(d3.schemeCategory10);
       const colors = [
@@ -113,21 +113,15 @@ export default {
 
       svg
         .append('text')
-        .attr('x', (width - margin.left - margin.right) / 2)
-        .attr('y', height - margin.bottom)
+        .attr('x', 100)
+        .attr('y', height - margin.bottom + 20)
         .attr('class', 'axis-label')
+        .style('font-size', '15px') // 设置文本大小为 16 像素
+        .style('font-weight', 'bold') // 将文本设为加粗
         .style('text-anchor', 'middle')
-        .text('Submission Times');
+        .text('Studen ID:cafe5989da5dfed9f404');
 
-      svg
-        .append('text')
-        .attr('transform', 'rotate(-90)')
-        .attr('y', 0 - margin.left)
-        .attr('x', 0 - (height - margin.top - margin.bottom) / 2)
-        .attr('dy', '1em')
-        .attr('class', 'axis-label')
-        .style('text-anchor', 'middle')
-        .text('Cumulative Average Score');
+      
     },
   },
 };

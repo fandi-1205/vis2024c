@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       width: 1600,
-      height: 300,
+      height: 280,
     };
   },
   mounted() {
@@ -26,8 +26,8 @@ export default {
       const height = this.height;
       //     读取CSV文件
       Promise.all([
-        d3.csv('/SubmitRecord-Class1.csv'),
-        d3.csv('/Data_TitleInfo.csv'),
+        d3.csv('SubmitRecord-Class4.csv'),
+        d3.csv('Data_TitleInfo.csv'),
       ]).then(([classData, titleInfoData]) => {
         let titleInfoMap = {};
         titleInfoData.forEach((d) => {
@@ -191,17 +191,17 @@ export default {
             .select(this.$refs.chart)
             .append('svg')
             .attr('width', width)
-            .attr('height', height + 50);
+            .attr('height', height + 20);
 
           svg
             .append('text')
             .attr('class', 'student-title')
-            .attr('x', 300)
-            .attr('y', 100)
+            .attr('x', 150)
+            .attr('y', 50)
             .attr('text-anchor', 'middle')
-            .style('font-size', '24px')
+            .style('font-size', '15px')
             .style('font-weight', 'bold')
-            .text(`学生ID: ${studentID}`);
+            .text(`StudentID: ${studentID}`);
 
           let g = svg
             .selectAll('.knowledge-g')
@@ -211,12 +211,12 @@ export default {
             .attr('class', 'knowledge-g')
             .attr(
               'transform',
-              (d, i) => `translate(${i * 180 + 120}, ${(height + 200) / 2})`
+              (d, i) => `translate(${i * 180 + 120}, ${(height + 100) / 2})`
             );
 
           g.append('circle')
             .attr('r', (d) => radiusScale(d.count))
-            .attr('fill', '#3C7DF3')
+            .attr('fill', '#97C1FF')
             .style('opacity', (d) => d.accuracy);
 
           g.append('text')
@@ -246,7 +246,7 @@ export default {
               .append('circle')
               .attr('class', 'sub-circle')
               .attr('r', (sk) => subRadiusScale(sk.count))
-              .attr('fill', '#BE74FC')
+              .attr('fill', '#FCD5F8')
               .style('opacity', (sk) => sk.accuracy)
               .on('mouseover', function (event, sk) {
                 // 鼠标悬停事件处理程序
@@ -265,14 +265,14 @@ export default {
                 // 恢复所有与当前子知识点名称相同的圆的原始样式
                 d3.selectAll(`.sub-circle`)
                   .filter((d) => d.sub_knowledge === currentSubKnowledge)
-                  .attr('fill', '#BE74FC') // 恢复原始填充颜色
+                  .attr('fill', '#FCD5F8') // 恢复原始填充颜色
                   .style('opacity', (sk) => sk.accuracy); // 恢复原始透明度
               });
 
             subG
               .append('text')
               .attr('class', 'sub-accuracy-label')
-              .attr('dy', (sk) => -subRadiusScale(sk.count) * 1.2)
+              .attr('dy', (sk) => -subRadiusScale(sk.count) * -1)
               .style('font-size', '8px')
               .text((sk) => (sk.accuracy * 100).toFixed(1) + '%');
 
@@ -287,7 +287,7 @@ export default {
               .append('circle')
               .attr('class', 'tiny-circle')
               .attr('r', (t) => tinyRadiusScale(t.count))
-              .attr('fill', '#7CE9B5')
+              .attr('fill', '#94F5C7')
               .style('fill-opacity', (t) => t.accuracy)
               .style('stroke', '#FF4975')
               .style('stroke-width', (t) => (t.accuracy < 0.1 ? 2 : 0))
@@ -310,7 +310,8 @@ export default {
                 d3.selectAll(`.tiny-circle`)
                   .filter((d) => d.title_ID === currentTitleID)
                   .attr('fill', '#7CE9B5') // 恢复原始填充颜色
-                  .style('opacity', (t) => t.accuracy); // 恢复原始透明度
+                  .style('opacity', (t) => t.accuracy) // 恢复原始透明度
+                  .style('stroke-width', (t) => (t.accuracy < 0.1 ? 2 : 0)); // 恢复描边宽度
               });
 
             tinyG
@@ -364,8 +365,8 @@ export default {
 <style scoped>
 #knowledge-mastery {
   position: relative;
-  width: 1800px;
-  height: 300px;
+  width: 100%;
+  height: 650px;
   overflow-y: scroll; /* Enable vertical scrolling */
   /* 横向禁止滚动 */
   overflow-x: hidden;

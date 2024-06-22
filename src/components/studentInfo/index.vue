@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: fandi
  * @Date: 2024-06-22 14:55:42
- * @LastEditTime: 2024-06-22 15:48:03
+ * @LastEditTime: 2024-06-22 18:03:54
  * @LastEditors: fandi
 -->
 <template>
@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .student-scroll-container {
-  max-height: 350px; /* 你可以根据需要调整高度 */
+  max-height: 200px; /* 你可以根据需要调整高度 */
   overflow-y: auto; /* 启用垂直滚动条 */
   margin: 20px;
 }

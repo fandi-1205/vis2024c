@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="column" id="left-column"></div>
-    <div class="column" id="right-column"></div>
+    <div class="column" id="column"></div>
+    <!-- <div class="column" id="right-column"></div> -->
     <div class="tooltip" id="tooltip"></div>
   </div>
 </template>
@@ -14,8 +14,8 @@ export default {
   mounted() {
     d3.json('111student_knowledge_analysis.json')
       .then((data) => {
-        const leftColumn = d3.select('#left-column');
-        const rightColumn = d3.select('#right-column');
+        const leftColumn = d3.select('#column');
+        // const rightColumn = d3.select('#right-column');
         const tooltip = d3.select('#tooltip');
 
         const knowledgeSequence = [
@@ -29,13 +29,14 @@ export default {
           'b3C9s',
         ];
 
-        Object.keys(data).forEach((studentId, index) => {
+        Object.keys(data).forEach((studentId) => {
           const studentData = data[studentId];
           const sequence = Array.from(
             new Set(studentData.map((d) => d.knowledge))
           );
 
-          const column = index % 2 === 0 ? leftColumn : rightColumn;
+          // const column = index % 2 === 0 ? leftColumn : rightColumn;
+          const column = leftColumn;
 
           const svgContainer = column
             .append('div')
@@ -54,10 +55,9 @@ export default {
             .attr('height', 200);
 
           const margin = { top: 40, right: 50, bottom: 20, left: 20 };
-          // eslint-disable-next-line
-          const width = +svg.attr('width') - margin.left - margin.right;
-          // eslint-disable-next-line
-          const height = +svg.attr('height') - margin.top - margin.bottom;
+
+          svg.attr('width') - margin.left - margin.right;
+          svg.attr('height') - margin.top - margin.bottom;
           const g = svg
             .append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -246,20 +246,16 @@ export default {
   display: flex;
   justify-content: space-between;
   gap: 3px;
-  width: 1800px; /* Set the desired container width */
-  height: 440px; /* Set the desired container height */
+  width: 730px; /* Set the desired container width */
+  height: 410px; /* Set the desired container height */
   overflow-y: scroll; /* Enable vertical scrolling */
   border: 1px solid #ccc; /* Add a border for visual reference */
   padding: 10px;
 }
 
-.column {
+/* .column {
   width: 50%;
-  /* overflow-y: auto;  Remove this line */
-}
-
-/* .svg-container {
-  margin-bottom: 10px;
+ 
 } */
 
 .tooltip {

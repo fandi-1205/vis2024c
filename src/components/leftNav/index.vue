@@ -18,21 +18,21 @@ export default {
   data() {
     return {
       datasets: [
-        { file: '班级1.csv', name: '班1' },
-        { file: '班级2.csv', name: '班2' },
-        { file: '班级3.csv', name: '班3' },
-        { file: '班级4.csv', name: '班4' },
-        { file: '班级5.csv', name: '班5' },
-        { file: '班级6.csv', name: '班6' },
-        { file: '班级7.csv', name: '班7' },
-        { file: '班级8.csv', name: '班8' },
-        { file: '班级9.csv', name: '班9' },
-        { file: '班级10.csv', name: '班10' },
-        { file: '班级11.csv', name: '班11' },
-        { file: '班级12.csv', name: '班12' },
-        { file: '班级13.csv', name: '班13' },
-        { file: '班级14.csv', name: '班14' },
-        { file: '班级15.csv', name: '班15' },
+        { file: 'SubmitRecord-Class1.csv', name: '班1' },
+        { file: 'SubmitRecord-Class2.csv', name: '班2' },
+        { file: 'SubmitRecord-Class3.csv', name: '班3' },
+        { file: 'SubmitRecord-Class4.csv', name: '班4' },
+        { file: 'SubmitRecord-Class5.csv', name: '班5' },
+        { file: 'SubmitRecord-Class6.csv', name: '班6' },
+        { file: 'SubmitRecord-Class7.csv', name: '班7' },
+        { file: 'SubmitRecord-Class8.csv', name: '班8' },
+        { file: 'SubmitRecord-Class9.csv', name: '班9' },
+        { file: 'SubmitRecord-Class10.csv', name: '班10' },
+        { file: 'SubmitRecord-Class11.csv', name: '班11' },
+        { file: 'SubmitRecord-Class12.csv', name: '班12' },
+        { file: 'SubmitRecord-Class13.csv', name: '班13' },
+        { file: 'SubmitRecord-Class14.csv', name: '班14' },
+        { file: 'SubmitRecord-Class15.csv', name: '班15' },
       ],
       colorScheme: ['#87B1FD', '#A7C5FB', '#06D7A0', '#48DCC4', '#A5FBB9'],
     };
@@ -81,8 +81,8 @@ export default {
       });
 
       const margin = { top: 5, right: 0, bottom: -20, left: 0 },
-        width = 100 - margin.left - margin.right,
-        height = 100 - margin.top - margin.bottom,
+        width = 120 - margin.left - margin.right,
+        height = 120 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;
 
       d3.select(chartID + ' svg').remove();
@@ -221,7 +221,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   /* height: 200vh; */
-  height: 1150px;
+  height: 1450px;
   overflow-y: auto; /* Add vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar if not needed */
 }

@@ -19,10 +19,10 @@ export default {
   },
   computed: {
     width() {
-      return 800 - this.margin.left - this.margin.right;
+      return 1100 - this.margin.left - this.margin.right;
     },
     height() {
-      return 800 - this.margin.top - this.margin.bottom;
+      return 1150 - this.margin.top - this.margin.bottom;
     },
     centerX() {
       return this.width / 2;
@@ -72,7 +72,7 @@ export default {
         .attr('height', chartHeight);
 
       this.container = svg.append('g');
-      this.zoom = d3.zoom().scaleExtent([0.2, 10]).on('zoom', this.zoomed);
+      this.zoom = d3.zoom().scaleExtent([0.3, 10]).on('zoom', this.zoomed);
       svg
         .call(this.zoom)
         .transition()
@@ -178,7 +178,7 @@ export default {
           .attr('cx', RectPositionX) // 基于矩形中心调整x坐标
           .attr('cy', RectPositionY)
           .attr('r', axis.totalAttempts / 2) // 半径大小，根据需要调整
-          .attr('fill', '#7AFEF0')
+          .attr('fill', '#3C7DF3')
           .attr('opacity', 0.3);
 
         const last = scale(d3.max(dayBetween));
@@ -190,7 +190,16 @@ export default {
           .attr('class', 'axis-label')
           .attr('x', lastPositionX)
           .attr('y', lastPositionY)
-          .text(index + 1);
+          .attr(
+            'transform',
+            `rotate(${
+              (angle * 180) / Math.PI
+            }, ${lastPositionX}, ${lastPositionY})`
+          )
+          .text(axis.name)
+          .style('font-size', '24px')
+          // 设置字体颜色
+          .style('fill', 'blue');
       });
     },
     zoomed(event) {

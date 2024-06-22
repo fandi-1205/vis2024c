@@ -21,16 +21,27 @@ export default {
       // height = fixedHeight - margin.top - margin.bottom,
       gridSize = Math.floor(width / 24),
       colors = [
-        '#ffffd9',
-        '#edf8b1',
-        '#c7e9b4',
-        '#7fcdbb',
-        '#41b6c4',
-        '#1d91c0',
-        '#225ea8',
-        '#253494',
-        '#081d58',
+        '#D9FFE4',
+        '#B6EDD4',
+        '#94DBC4',
+        '#71C9B4',
+        '#41B6C4',
+        '#538ADE',
+        '#4778C8',
+        '#3E6AB7',
+        '#3359A2',
       ];
+    // colors = [
+    //   '#97C1FF',
+    //   '#A1C3FE',
+    //   '#ADC5FD',
+    //   '#BAC8FD',
+    //   '#C8CBFC',
+    //   '#D5CDFB',
+    //   '#E0CFFA',
+    //   '#EED2F9',
+    //   '#FCD5F8',
+    // ];
 
     axios
       .get('http://127.0.0.1:3001/time')
@@ -48,6 +59,7 @@ export default {
           studentContainer
             .append('div')
             .attr('class', 'student-title')
+            .style('font-weight', 'bold')
             .text(`Student ID: ${student._id}`);
 
           const svg = studentContainer
@@ -86,7 +98,7 @@ export default {
             .style('fill', (d) =>
               d.count === 0 ? '#ffffff' : colorScale(d.count)
             )
-            .style('stroke', '#000')
+            .style('stroke', '#3359A2')
             .style('stroke-width', 1);
 
           heatMap.append('title').text((d) => d.count);
@@ -208,8 +220,8 @@ export default {
   /* font-weight: bold; */
 }
 #heatmap-container {
-  width: 1200px; /* Set the desired container width */
-  height: 300px; /* Set the desired container height */
+  width: 1020px; /* Set the desired container width */
+  height: 360px; /* Set the desired container height */
   overflow-y: scroll; /* Enable vertical scrolling if needed */
   border: 1px solid #ccc; /* Add a border for visual reference */
   padding: 20px 80px;

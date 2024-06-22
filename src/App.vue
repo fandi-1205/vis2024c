@@ -23,18 +23,15 @@
 
         <div class="layout-middle-middle common">
           <MainMap :mainMapData="axesData"></MainMap>
-        </div>
-
-        <div class="layout-middle-bottom common">
-          <ProgressChart></ProgressChart>
+          <StudentInfo></StudentInfo>
         </div>
       </div>
 
       <div class="layout-column-right">
         <div class="layout-right-top">
           <div class="layout-right-top-left common">
+            <StudyOrder></StudyOrder>
             <!-- <StudentScores></StudentScores> -->
-            <StudentInfo></StudentInfo>
           </div>
 
           <div class="layout-right-top-right common">
@@ -47,7 +44,7 @@
         </div>
 
         <div class="layout-right-bottom common">
-          <StudyOrder></StudyOrder>
+          <ProgressChart></ProgressChart>
 
           <!-- <div class="layout-right-bottom-left"></div>
         <div class="layout-right-bottom-right"></div> -->
@@ -161,7 +158,7 @@ button:hover {
 
 .layout-column-left {
   margin: 5px;
-  height: 1190px;
+  /* height: 1200px; */
 }
 
 .layout-column-middle {

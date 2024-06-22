@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: fandi
  * @Date: 2024-06-20 23:07:41
- * @LastEditTime: 2024-06-20 23:42:57
+ * @LastEditTime: 2024-06-22 13:32:40
  * @LastEditors: fandi
 -->
 <template>
@@ -17,7 +17,7 @@
       <!-- Legend详情，使用v-show控制显示隐藏 -->
       <div class="legend-details" v-show="isLegendOpen" ref="legendDetails">
         <!-- 这里放置Legend的具体内容 -->
-        Legend Content Here...
+        <img src="legend.jpg" alt="Legend Image" class="legend-image" />
       </div>
     </div>
   </div>
@@ -87,9 +87,17 @@ button {
   top: 60px; /* 与导航栏底部对齐 */
   left: 0;
   right: 0;
-  background-color: #f9f9f9;
+  background-color: rgba(232, 238, 255, 0.8); /* 添加透明度 */
   padding: 10px;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  text-align: center; /* 居中对齐文本和内容 */
+}
+
+.legend-image {
+  width: 600px; /* 设置图片宽度 */
+  height: auto; /* 按比例缩放图片高度 */
+  display: block;
+  margin: 20px auto; /* 上下边距为20px，左右自动调整居中 */
 }
 </style>

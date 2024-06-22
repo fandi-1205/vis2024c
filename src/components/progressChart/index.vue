@@ -22,7 +22,7 @@ export default {
         const response = await d3.json('cumulative_average_scores.json');
         this.progressData = response;
         // 在这里安全地使用 this.progressData，因为它已经被赋值了
-        console.log(this.progressData);
+        // console.log(this.progressData);
       } catch (error) {
         console.error('Error loading data:', error);
       }

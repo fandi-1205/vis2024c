@@ -221,6 +221,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   /* height: 200vh; */
+  height: 1150px;
   overflow-y: auto; /* Add vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar if not needed */
 }

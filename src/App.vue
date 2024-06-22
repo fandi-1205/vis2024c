@@ -158,6 +158,7 @@ button:hover {
 
 .layout-column-left {
   margin: 5px;
+  height: 1190px;
 }
 
 .layout-column-middle {
@@ -179,7 +180,7 @@ button:hover {
 }
 
 .layout-middle-middle {
-  flex: 1;
+  /* flex: 1; */
   margin: 5px;
   /* height: 1000px; */
 }

@@ -19,10 +19,10 @@ export default {
   },
   computed: {
     width() {
-      return 1000 - this.margin.left - this.margin.right;
+      return 800 - this.margin.left - this.margin.right;
     },
     height() {
-      return 1000 - this.margin.top - this.margin.bottom;
+      return 800 - this.margin.top - this.margin.bottom;
     },
     centerX() {
       return this.width / 2;
@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       margin: { top: 5, right: 5, bottom: 5, left: 5 },
-      radius: 260,
+      radius: 280,
       svg: null,
       container: null,
       zoom: null,
@@ -72,7 +72,7 @@ export default {
         .attr('height', chartHeight);
 
       this.container = svg.append('g');
-      this.zoom = d3.zoom().scaleExtent([0.3, 10]).on('zoom', this.zoomed);
+      this.zoom = d3.zoom().scaleExtent([0.2, 10]).on('zoom', this.zoomed);
       svg
         .call(this.zoom)
         .transition()

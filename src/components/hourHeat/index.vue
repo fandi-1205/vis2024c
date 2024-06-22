@@ -28,7 +28,6 @@ export default {
 
     d3.json('time.json')
       .then((data) => {
-        console.log('Data loaded:', data); // Debugging: check data load
         const container = d3.select(this.$el); // Select the outer container
 
         data.forEach((student) => {
@@ -57,8 +56,6 @@ export default {
               : 0;
             return { hour, count };
           });
-
-          console.log(`Hours data for student ${student._id}:`, hoursData); // Debugging: check processed data
 
           // Create color scale
           const colorScale = d3

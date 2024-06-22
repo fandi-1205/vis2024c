@@ -27,7 +27,7 @@ export default {
         console.error('Error loading data:', error);
       }
       const width = 700;
-      const height = 300;
+      const height = 340;
       const margin = { top: 20, right: 30, bottom: 50, left: 60 };
 
       const svg = d3

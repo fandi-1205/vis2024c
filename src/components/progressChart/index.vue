@@ -26,7 +26,7 @@ export default {
       } catch (error) {
         console.error('Error loading data:', error);
       }
-      const width = 960;
+      const width = 700;
       const height = 500;
       const margin = { top: 20, right: 30, bottom: 50, left: 60 };
 

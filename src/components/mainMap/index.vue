@@ -19,10 +19,10 @@ export default {
   },
   computed: {
     width() {
-      return 1000 - this.margin.left - this.margin.right;
+      return 1500 - this.margin.left - this.margin.right;
     },
     height() {
-      return 1000 - this.margin.top - this.margin.bottom;
+      return 1500 - this.margin.top - this.margin.bottom;
     },
     centerX() {
       return this.width / 2;

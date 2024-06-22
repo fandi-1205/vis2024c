@@ -1,7 +1,7 @@
 <template>
   <div id="knowledge-mastery">
     <div ref="chart"></div>
-    <div class="tooltip" ref="tooltip"></div>
+    <div class="tooltip" ref="tooltip" v-if="tooltipContent"></div> <!-- 悬浮框结构 -->
   </div>
 </template>
 
@@ -19,16 +19,13 @@ export default {
   },
   mounted() {
     this.createChart();
+    
   },
   methods: {
     createChart() {
       const width = this.width;
       const height = this.height;
-      const tooltip = d3.select(this.$refs.tooltip)
-        .style('opacity', 0)
-        .style('background', 'rgba(255, 255, 255, 0.8)')
-        .style('text-align', 'left');
-
+  //     读取CSV文件
       Promise.all([
         d3.csv('/SubmitRecord-Class1.csv'),
         d3.csv('/Data_TitleInfo.csv')
@@ -116,6 +113,10 @@ export default {
             });
           }
 
+          // 按照固定顺序排序知识点数据
+          const fixedOrder = ['r8S3g', 't5V9e', 'm3D1v', 'y9W5d', 'k4W1c', 's8Y2f', 'g7R2j', 'b3C9s'];
+          knowledgeData.sort((a, b) => fixedOrder.indexOf(a.knowledge) - fixedOrder.indexOf(b.knowledge));
+
           let radiusScale = d3.scaleSqrt()
             .domain([0, d3.max(knowledgeData, d => d.count)])
             .range([32, 96]);
@@ -178,26 +179,29 @@ export default {
               .attr("fill", "#BE74FC")
               .style("opacity", sk => sk.accuracy)
               .on("mouseover", function(event, sk) {
-                d3.select(this)
-                  .attr("fill", "#FF4975")
-                  .style("opacity", 0.8);
+  
+    // 鼠标悬停事件处理程序
+    const currentSubKnowledge = sk.sub_knowledge; // 获取当前子知识点名称
 
-                tooltip.transition()
-                  .duration(200)
-                  .style("opacity", .9);
-                tooltip.html(sk.sub_knowledge)
-                  .style("left", (event.pageX + 10) + "px")
-                  .style("top", (event.pageY + 10) + "px");
+    // 选择所有与当前子知识点名称相同的圆，并高亮显示
+    d3.selectAll(`.sub-circle`)
+      .filter(d => d.sub_knowledge === currentSubKnowledge)
+      .attr("fill", "#FF4975") // 改变填充颜色
+      .style("opacity", 1); // 改变透明度
+  })
+  .on("mouseout", function(event, sk) {
 
-              })
-              .on("mouseout", function() {
-                d3.select(this)
-                  .attr("fill", "#3C7DF3")
-                  .style("opacity", d => d.accuracy);
-                tooltip.transition()
-                  .duration(500)
-                  .style("opacity", 0);
-              });
+    // 鼠标移出事件处理程序
+    const currentSubKnowledge = sk.sub_knowledge; // 获取当前子知识点名称
+
+    // 恢复所有与当前子知识点名称相同的圆的原始样式
+    d3.selectAll(`.sub-circle`)
+      .filter(d => d.sub_knowledge === currentSubKnowledge)
+      .attr("fill", "#BE74FC") // 恢复原始填充颜色
+      .style("opacity", sk => sk.accuracy); // 恢复原始透明度
+  });
+
+              
 
             subG.append("text")
               .attr("class", "sub-accuracy-label")
@@ -218,27 +222,27 @@ export default {
               .style("stroke", "#FF4975")
               .style("stroke-width", t => t.accuracy < 0.1 ? 2 : 0)
               .style("stroke-opacity", 0.8)
-              .on("mouseover", function(event, t
-              ) {
-                d3.select(this)
-                  .attr("fill", "#FF4975")
-                  .style("fill-opacity", 0.8);
+              .on("mouseover", function(event, t) {
+    // 鼠标悬停事件处理程序
+    const currentTitleID = t.title_ID; // 获取当前题目 ID
 
-                tooltip.transition()
-                  .duration(200)
-                  .style("opacity", .9);
-                tooltip.html(`题目: ${t.title_ID}<br>答题次数: ${t.count}`)
-                  .style("left", (event.pageX) + "px")
-                  .style("top", (event.pageY) + "px");
-              })
-              .on("mouseout", function() {
-                d3.select(this)
-                  .attr("fill", "#7CE9B5")
-                  .style("fill-opacity", t => t.accuracy);
-                tooltip.transition()
-                  .duration(500)
-                  .style("opacity", 0);
-              });
+    // 选择所有与当前题目 ID 相同的小圆，并高亮显示
+    d3.selectAll(`.tiny-circle`)
+      .filter(d => d.title_ID === currentTitleID)
+      .attr("fill", "#FF4975") // 改变填充颜色
+      .style("opacity", 1); // 改变透明度
+  })
+  .on("mouseout", function(event, t) {
+    // 鼠标移出事件处理程序
+    const currentTitleID = t.title_ID; // 获取当前题目 ID
+
+    // 恢复所有与当前题目 ID 相同的小圆的原始样式
+    d3.selectAll(`.tiny-circle`)
+      .filter(d => d.title_ID === currentTitleID)
+      .attr("fill", "#7CE9B5") // 恢复原始填充颜色
+      .style("opacity", t => t.accuracy); // 恢复原始透明度
+  });
+
 
             tinyG.append('text')
               .attr('class', 'tiny-circle-text')
@@ -247,6 +251,8 @@ export default {
               .text((t) => (t.accuracy * 100).toFixed(1) + '%')
               .style('font-size', '4px')
               .style('fill', '#000');
+
+              
 
             // Force simulation for sub-circles
             // eslint-disable-next-line no-unused-vars
@@ -271,6 +277,10 @@ export default {
                 });
             });
           });
+         
+
+      
+        
         });
       });
     },
@@ -288,18 +298,13 @@ export default {
   /* 横向禁止滚动 */
   overflow-x: hidden;
 }
-
 .tooltip {
   position: absolute;
-  text-align: center;
-  width: 120px;
-  height: 28px;
-  padding: 2px;
-  font: 12px sans-serif;
-  background: lightsteelblue;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 10;
+  pointer-events: none; /* 防止悬浮框本身影响鼠标事件 */
 }
 </style>
 

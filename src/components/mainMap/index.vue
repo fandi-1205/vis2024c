@@ -127,7 +127,7 @@ export default {
           .call(axisGenerator)
           .attr('class', axis.sex)
           .select('.domain') // 选择.axis path, 对应于坐标轴线
-          .style('stroke', colorScale(1 - axis.zeroScoreRatio))
+          .style('stroke', colorScale(axis.accuracy))
           .style('stroke-width', 4); // yourColor 替换为你想要的颜色，如 '#ff0000' 表示红色
 
         // 为每个轴的每个刻度添加圆形
@@ -148,7 +148,7 @@ export default {
             .attr('cy', rectCenterY)
             // .attr("r", 10) // 半径大小，根据需要调整
             .attr('r', 10) // 半径大小，根据需要调整
-            .attr('stroke', colorScale(1 - axis.zeroScoreRatio))
+            .attr('stroke', colorScale(axis.accuracy))
             .attr('stroke-width', 2)
             // .attr('fill', colorScale(tickValue.value));
             .attr('fill', colorScaleBlues(tickValue.value));

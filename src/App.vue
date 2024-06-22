@@ -32,7 +32,9 @@
 
       <div class="layout-column-right">
         <div class="layout-right-top">
-          <div class="layout-right-top-left common"></div>
+          <div class="layout-right-top-left common">
+            <StudentScores></StudentScores>
+          </div>
 
           <div class="layout-right-top-right common">
             <HourHeat></HourHeat>
@@ -63,6 +65,7 @@ import StudyOrder from './components/studyOrder/';
 import ProgressChart from './components/progressChart/';
 
 import TopNav from './components/topNav/';
+import StudentScores from './components/studentScores/';
 import axios from 'axios';
 
 export default {
@@ -75,6 +78,7 @@ export default {
     HourHeat,
     StudyOrder,
     ProgressChart,
+    StudentScores,
   },
   data() {
     return {

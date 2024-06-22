@@ -68,16 +68,33 @@ export default {
 
       svg.append('g').call(d3.axisLeft(y));
 
-      const color = d3.scaleOrdinal(d3.schemeCategory10);
-
+      // const color = d3.scaleOrdinal(d3.schemeCategory10);
+      const colors = [
+        '#425A9D',
+        '#5C83DF',
+        '#9EBFFF',
+        '#6FB4C2',
+        '#A9D9C5',
+        '#8BF2DA',
+        '#FFA6D1',
+        '#FCD5F8',
+      ];
+      let knowledgeListOld = [];
       this.progressData.forEach((d) => {
+        knowledgeListOld.push(d.knowledge);
+      });
+      // const knowledgeListNew = new Set(...knowledgeListOld);
+      // console.log(knowledgeListOld);
+
+      this.progressData.forEach((d, i) => {
         svg
           .append('path')
           .datum(d.values)
           .attr('fill', 'none')
-          .attr('stroke', color(d.knowledge))
+          .attr('stroke', colors[i])
           .attr('class', 'line')
-          .attr('d', line);
+          .attr('d', line)
+          .attr('stroke-width', 3);
 
         svg
           .append('text')
@@ -89,7 +106,8 @@ export default {
           )
           .attr('x', 5)
           .attr('dy', '.35em')
-          .style('fill', color(d.knowledge))
+          .style('font-size', '20px')
+          .style('fill', colors[i])
           .text(d.knowledge);
       });
 
@@ -115,12 +133,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.line {
-  fill: none;
-  stroke-width: 2px;
-}
-.axis-label {
-  font-size: 12px;
-}
-</style>
+<style scoped></style>

@@ -1,0 +1,382 @@
+<template>
+    <div class="layout-container">
+      <div class="layout-column-left common">
+        <LeftNav></LeftNav>
+      </div>
+  
+  
+      <div class="layout-column-middle">
+  
+        <div class="layout-middle-top common">
+          <div class="button-group">
+            <button @click="() => sendButtonInfoToBackend('frequency')">
+              按次数排序
+            </button>
+            <button @click="() => sendButtonInfoToBackend('accuracy')">
+              按正确率排序
+            </button>
+            <button @click="() => sendButtonInfoToBackend('days')">
+              按天数排序
+            </button>
+          </div>
+        </div>
+  
+        <div class="layout-middle-middle common">
+          <MainMap :mainMapData="axesData"></MainMap>
+        </div>
+  
+        <div class="layout-middle-bottom common"></div>
+      </div>
+  
+      <div class="layout-column-right">
+        <div class="layout-right-top">
+  
+          <div class="layout-right-top-left common"></div>
+  
+          <div class="layout-right-top-right common">
+            <HourHeat></HourHeat>
+          </div>
+        </div>
+  
+        <div class="layout-right-middle common">
+          <KnowledgeMasteryVue></KnowledgeMasteryVue>
+        </div>
+  
+        <div class="layout-right-bottom common">
+          <div class="layout-right-bottom-left"></div>
+          <div class="layout-right-bottom-right"></div>
+        </div>
+  
+      </div>
+    </div>
+  </template>
+  
+  
+  
+  <!-- <template>
+    <div class="layout-container">
+      <div class="layout-column-left common">
+        <LeftNav></LeftNav>
+      </div>
+  
+      <div class="layout-column-middle">
+        <div class="layout-middle-top common">
+          <div class="button-group">
+            <button @click="() => sendButtonInfoToBackend('frequency')">
+              按次数排序
+            </button>
+            <button @click="() => sendButtonInfoToBackend('accuracy')">
+              按正确率排序
+            </button>
+            <button @click="() => sendButtonInfoToBackend('days')">
+              按天数排序
+            </button>
+          </div>
+        </div>
+        <div class="layout-middle-middle common">
+          <MainMap :mainMapData="axesData"></MainMap>
+        </div>
+        <div class="layout-middle-bottom common"></div>
+      </div>
+  
+      <div class="layout-column-right">
+        <div class="layout-right-grid">
+          <div class="layout-right-top-left common"></div>
+          <div class="layout-right-top-right common">
+            <HourHeat></HourHeat>
+          </div>
+          <div class="layout-right-middle common">
+            <KnowledgeMasteryVue></KnowledgeMasteryVue>
+          </div>
+          <div class="layout-right-bottom-left common"></div>
+          <div class="layout-right-bottom-right common"></div>
+        </div>
+      </div>
+    </div>
+  </template> -->
+  
+  
+  
+  
+  <script>
+  import MainMap from './components/mainMap';
+  import LeftNav from './components/leftNav/';
+  import KnowledgeMasteryVue from './components/knowledageMastery/';
+  import HourHeat from './components/hourHeat/';
+  import axios from 'axios';
+  
+  export default {
+    name: 'App',
+    components: {
+      LeftNav,
+      MainMap,
+      KnowledgeMasteryVue,
+      HourHeat,
+    },
+    data() {
+      return {
+        axesData: [],
+      };
+    },
+    mounted() {
+      this.sendButtonInfoToBackend('');
+    },
+    methods: {
+      sendButtonInfoToBackend(buttonName) {
+        if (buttonName) {
+          axios
+            .get('http://127.0.0.1:3001/student2/sort', {
+              params: {
+                sortBy: buttonName,
+              },
+            })
+            .then((response) => {
+              console.log('请求成功，后端响应：', response.data);
+              // 在这里处理成功的逻辑，比如更新 UI
+              this.axesData = response.data;
+              this.renderChart();
+            })
+            .catch((error) => {
+              console.error('请求失败示：', error);
+              // 在这里处理错误，比如提用户
+            });
+        } else {
+          axios
+            .get('http://127.0.0.1:3001/student2')
+            .then((response) => {
+              this.axesData = response.data;
+              console.log(this.mainMapData);
+              // this.renderChart();
+              // this.generateAxes(response);
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+        }
+        // 发送 POST 请求到后端，携带按钮名称作为参数
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  .common {
+    border: 3px solid #cad9f4;
+    border-radius: 10px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background-color: #7099e5;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+  }
+  button:hover {
+    background-color: #316fe2;
+  }
+  
+  
+  .layout-container {
+    display: flex;
+    height: 100vh;
+   
+  }
+  
+  .layout-column-left {
+    margin: 5px;
+    width: 7%;
+    border-radius: 10px;
+  
+  }
+  
+  .layout-column-middle {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+   
+  }
+  
+  .layout-column-right {
+    display: flex;
+    flex-direction: column;
+    width: 46%;
+  
+  }
+  
+  .layout-middle-top {
+    display: flex;
+    margin: 5px;
+    height: 6%;
+  }
+  
+  .layout-middle-middle {
+    flex: 1;
+    margin: 5px;
+  }
+  
+  .layout-middle-bottom {
+    margin: 5px;
+    height: 10%;
+  }
+  
+  .layout-right-top,
+  .layout-right-bottom {
+    display: flex;
+    flex: 1;
+  }
+  
+  .layout-right-top {
+  width:20%;
+  }
+  
+  
+  .layout-right-middle {
+    flex: 1;
+    margin: 5px;
+  }
+  
+  .layout-right-top-left,
+  .layout-right-top-right,
+  .layout-right-bottom-left,
+  .layout-right-top-left,
+  .layout-right-bottom-right {
+    flex: 1;
+    margin: 5px;
+  }
+  
+  .layout-right-top-left {
+    flex: 1;
+    /* width: 100px; */
+    margin-right: 5px;
+  }
+  
+  .layout-right-top-right {
+    flex: 2;
+  }
+  </style>
+  
+  
+  
+  
+  
+  
+  <!-- <style scoped>
+  .common {
+    border: 3px solid #cad9f4;
+    border-radius: 10px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background-color: #7099e5;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #316fe2;
+  }
+  
+  .layout-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .layout-column-left {
+    margin: 5px;
+    width: 7%;
+    border-radius: 10px;
+  }
+  
+  .layout-column-middle {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+  }
+  
+  .layout-column-right {
+    display: flex;
+    flex-direction: column;
+    width: 46%;
+  }
+  
+  .layout-middle-top {
+    display: flex;
+    margin: 5px;
+    height: 6%;
+  }
+  
+  .layout-middle-middle {
+    flex: 1;
+    margin: 5px;
+  }
+  
+  .layout-middle-bottom {
+    margin: 5px;
+    height: 10%;
+  }
+  
+  
+  
+  
+  .layout-right-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .layout-right-top-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 90%; /* 确保它占满整列 */
+    height: 100%; /* 确保它占满整行 */
+  }
+  
+  
+  .layout-right-top-right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .layout-right-middle {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  .layout-right-bottom-left {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .layout-right-bottom-right {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  </style> -->
+  

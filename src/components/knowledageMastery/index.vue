@@ -205,7 +205,7 @@ export default {
 
             subG.append("text")
               .attr("class", "sub-accuracy-label")
-              .attr('dy', sk => -subRadiusScale(sk.count) * 1.2)
+              .attr('dy', sk => -subRadiusScale(sk.count) * -1)
               .style('font-size', '8px')
               .text(sk => (sk.accuracy * 100).toFixed(1) + "%");
 
@@ -240,7 +240,8 @@ export default {
     d3.selectAll(`.tiny-circle`)
       .filter(d => d.title_ID === currentTitleID)
       .attr("fill", "#7CE9B5") // 恢复原始填充颜色
-      .style("opacity", t => t.accuracy); // 恢复原始透明度
+      .style("opacity", t => t.accuracy)// 恢复原始透明度
+      .style("stroke-width", t => t.accuracy < 0.1 ? 2 : 0); // 恢复描边宽度
   });
 
 

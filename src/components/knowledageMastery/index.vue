@@ -12,7 +12,7 @@ export default {
   name: 'KnowledgeMastery',
   data() {
     return {
-      width: 1500,
+      width: 1600,
       height: 300,
     };
   },
@@ -199,7 +199,7 @@ export default {
             .attr('class', 'knowledge-g')
             .attr(
               'transform',
-              (d, i) => `translate(${i * 180 + 120}, ${(height + 200) / 2})`
+              (d, i) => `translate(${i * 180 + 150}, ${(height + 200) / 2})`
             );
 
           g.append('circle')
@@ -347,6 +347,8 @@ export default {
   width: 100%;
   height: 700px;
   overflow-y: scroll; /* Enable vertical scrolling */
+  /* 横向禁止滚动 */
+  overflow-x: hidden;
 }
 
 .tooltip {

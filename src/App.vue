@@ -33,7 +33,8 @@
       <div class="layout-column-right">
         <div class="layout-right-top">
           <div class="layout-right-top-left common">
-            <StudentScores></StudentScores>
+            <!-- <StudentScores></StudentScores> -->
+            <StudentInfo></StudentInfo>
           </div>
 
           <div class="layout-right-top-right common">
@@ -63,7 +64,8 @@ import KnowledgeMasteryVue from './components/knowledageMastery/';
 import HourHeat from './components/hourHeat/';
 import StudyOrder from './components/studyOrder/';
 import ProgressChart from './components/progressChart/';
-import StudentScores from './components/studentScores/';
+// import StudentScores from './components/studentScores/';
+import StudentInfo from './components/studentInfo/';
 import TopNav from './components/topNav/';
 import axios from 'axios';
 
@@ -77,7 +79,8 @@ export default {
     HourHeat,
     StudyOrder,
     ProgressChart,
-    StudentScores,
+    StudentInfo,
+    // StudentScores,
   },
   data() {
     return {

@@ -63,9 +63,8 @@ import KnowledgeMasteryVue from './components/knowledageMastery/';
 import HourHeat from './components/hourHeat/';
 import StudyOrder from './components/studyOrder/';
 import ProgressChart from './components/progressChart/';
-
-import TopNav from './components/topNav/';
 import StudentScores from './components/studentScores/';
+import TopNav from './components/topNav/';
 import axios from 'axios';
 
 export default {

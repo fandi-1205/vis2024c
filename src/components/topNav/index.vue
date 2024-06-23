@@ -51,7 +51,7 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px; /* 请根据实际需求调整高度 */
+  height: 70px; /* 请根据实际需求调整高度 */
   background-color: #7099e5;
   display: flex;
   justify-content: space-between;
@@ -69,7 +69,7 @@ button {
   border: none;
   background-color: #7099e5;
   color: #fff;
-  font-size: 16px;
+  font-size: 22px;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -95,7 +95,7 @@ button {
 }
 
 .legend-image {
-  width: 600px; /* 设置图片宽度 */
+  width: 850px; /* 设置图片宽度 */
   height: auto; /* 按比例缩放图片高度 */
   display: block;
   margin: 20px auto; /* 上下边距为20px，左右自动调整居中 */

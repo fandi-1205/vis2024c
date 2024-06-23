@@ -66,7 +66,8 @@ export default {
       const line = d3
         .line()
         .x((d) => x(d.submission))
-        .y((d) => y(d.cumulative_average_score));
+        .y((d) => y(d.cumulative_average_score))
+        .curve(d3.curveBasis); // 这里设置曲线插值方式
 
       svg
         .append('g')

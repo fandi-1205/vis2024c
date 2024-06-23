@@ -44,7 +44,11 @@
         </div>
 
         <div class="layout-right-bottom common">
-          <ProgressChart></ProgressChart>
+          <ProgressChart
+            v-for="(path, index) in paths"
+            :key="index"
+            :dataFilePath="path"
+          ></ProgressChart>
 
           <!-- <div class="layout-right-bottom-left"></div>
         <div class="layout-right-bottom-right"></div> -->
@@ -82,6 +86,15 @@ export default {
   data() {
     return {
       axesData: [],
+      paths: [
+        // 'cumulative_average_scores.json',
+        'cumulative_average_scores_0d4a3518a188f6888380.json',
+        'cumulative_average_scores_6d22912e7e93a96a8690.json',
+        'cumulative_average_scores_ac4d829c715fb0c36ad5.json',
+        // 'cumulative_average_scores_db0bcf208cbed26d0bfe.json',
+
+        // 更多路径...
+      ],
     };
   },
   mounted() {

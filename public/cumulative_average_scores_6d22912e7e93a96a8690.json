@@ -1,0 +1,252 @@
+[
+    {
+        "knowledge": "m3D1v",
+        "values": [
+            {
+                "submission": 1,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 2,
+                "cumulative_average_score": 0.8333333333333334
+            },
+            {
+                "submission": 3,
+                "cumulative_average_score": 0.7777777777777778
+            },
+            {
+                "submission": 4,
+                "cumulative_average_score": 0.8333333333333334
+            },
+            {
+                "submission": 5,
+                "cumulative_average_score": 0.8666666666666667
+            },
+            {
+                "submission": 6,
+                "cumulative_average_score": 0.8888888888888888
+            },
+            {
+                "submission": 7,
+                "cumulative_average_score": 0.9047619047619048
+            },
+            {
+                "submission": 8,
+                "cumulative_average_score": 0.9166666666666666
+            },
+            {
+                "submission": 9,
+                "cumulative_average_score": 0.9259259259259259
+            },
+            {
+                "submission": 10,
+                "cumulative_average_score": 0.9333333333333333
+            },
+            {
+                "submission": 11,
+                "cumulative_average_score": 0.9393939393939394
+            },
+            {
+                "submission": 12,
+                "cumulative_average_score": 0.9444444444444444
+            },
+            {
+                "submission": 13,
+                "cumulative_average_score": 0.8717948717948718
+            }
+        ]
+    },
+    {
+        "knowledge": "t5V9e",
+        "values": [
+            {
+                "submission": 1,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 2,
+                "cumulative_average_score": 0.5
+            },
+            {
+                "submission": 3,
+                "cumulative_average_score": 0.6666666666666666
+            },
+            {
+                "submission": 4,
+                "cumulative_average_score": 0.75
+            },
+            {
+                "submission": 5,
+                "cumulative_average_score": 0.6
+            },
+            {
+                "submission": 6,
+                "cumulative_average_score": 0.6666666666666666
+            },
+            {
+                "submission": 7,
+                "cumulative_average_score": 0.5714285714285714
+            },
+            {
+                "submission": 8,
+                "cumulative_average_score": 0.625
+            },
+            {
+                "submission": 9,
+                "cumulative_average_score": 0.5555555555555556
+            },
+            {
+                "submission": 10,
+                "cumulative_average_score": 0.5
+            },
+            {
+                "submission": 11,
+                "cumulative_average_score": 0.45454545454545453
+            },
+            {
+                "submission": 12,
+                "cumulative_average_score": 0.4166666666666667
+            }
+        ]
+    },
+    {
+        "knowledge": "r8S3g",
+        "values": [
+            {
+                "submission": 1,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 2,
+                "cumulative_average_score": 0.5
+            },
+            {
+                "submission": 3,
+                "cumulative_average_score": 0.3333333333333333
+            },
+            {
+                "submission": 4,
+                "cumulative_average_score": 0.5
+            },
+            {
+                "submission": 5,
+                "cumulative_average_score": 0.6
+            },
+            {
+                "submission": 6,
+                "cumulative_average_score": 0.5
+            },
+            {
+                "submission": 7,
+                "cumulative_average_score": 0.5714285714285714
+            },
+            {
+                "submission": 8,
+                "cumulative_average_score": 0.625
+            },
+            {
+                "submission": 9,
+                "cumulative_average_score": 0.5555555555555556
+            },
+            {
+                "submission": 10,
+                "cumulative_average_score": 0.5
+            },
+            {
+                "submission": 11,
+                "cumulative_average_score": 0.45454545454545453
+            }
+        ]
+    },
+    {
+        "knowledge": "b3C9s",
+        "values": [
+            {
+                "submission": 1,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 2,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 3,
+                "cumulative_average_score": 1.0
+            }
+        ]
+    },
+    {
+        "knowledge": "g7R2j",
+        "values": [
+            {
+                "submission": 1,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 2,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 3,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 4,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 5,
+                "cumulative_average_score": 1.0
+            }
+        ]
+    },
+    {
+        "knowledge": "y9W5d",
+        "values": [
+            {
+                "submission": 1,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 2,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 3,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 4,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 5,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 6,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 7,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 8,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 9,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 10,
+                "cumulative_average_score": 1.0
+            },
+            {
+                "submission": 11,
+                "cumulative_average_score": 1.0
+            }
+        ]
+    }
+]

@@ -13,7 +13,7 @@ export default {
   name: 'KnowledgeMastery',
   data() {
     return {
-      width: 1600,
+      width: 1550,
       height: 280,
     };
   },
@@ -365,7 +365,7 @@ export default {
 <style scoped>
 #knowledge-mastery {
   position: relative;
-  width: 100%;
+  width: 1620px;
   height: 650px;
   overflow-y: scroll; /* Enable vertical scrolling */
   /* 横向禁止滚动 */

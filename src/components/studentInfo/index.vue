@@ -2,23 +2,25 @@
  * @Description: 
  * @Author: fandi
  * @Date: 2024-06-22 14:55:42
- * @LastEditTime: 2024-06-22 18:03:54
+ * @LastEditTime: 2024-06-23 16:16:20
  * @LastEditors: fandi
 -->
 <template>
   <div class="student-scroll-container">
-    <div v-for="(item, index) in data" :key="index">
+    <div v-for="(item, index) in data" :key="index" class="student-info">
       <!-- <h3>{{ item.name || '未命名' }}</h3> -->
-      <p><strong>编号:</strong> {{ item.student_ID }}</p>
-      <p><strong>性别:</strong> {{ item.sex }}</p>
-      <p><strong>年龄:</strong> {{ item.age }}</p>
-      <p><strong>专业:</strong> {{ item.major }}</p>
+      <div>
+        <strong>编号 NO:{{ index + 1 }}</strong> {{ item.student_ID }}
+      </div>
+      <div><strong>性别:</strong> {{ item.sex }}</div>
+      <div><strong>年龄:</strong> {{ item.age }}</div>
+      <div><strong>专业:</strong> {{ item.major }}</div>
     </div>
   </div>
 </template>
 
 <script>
-import * as d3 from 'd3';
+import axios from 'axios';
 export default {
   name: 'StudentInfo',
   data() {
@@ -30,16 +32,10 @@ export default {
     this.drawStudentInfo();
   },
   methods: {
-    async drawStudentInfo() {
-      try {
-        const response = await d3.json('Data_StudentInfo.json');
-        this.data = response;
-        console.log(this.data);
-        // 在这里安全地使用 this.progressData，因为它已经被赋值了
-        // console.log(this.progressData);
-      } catch (error) {
-        console.error('Error loading data:', error);
-      }
+    drawStudentInfo() {
+      axios.get('http://127.0.0.1:3001/studentInfo').then((response) => {
+        this.data = response.data;
+      });
     },
   },
 };
@@ -47,12 +43,21 @@ export default {
 
 <style scoped>
 .student-scroll-container {
-  max-height: 200px; /* 你可以根据需要调整高度 */
+  display: flex;
+  max-height: 300px; /* 你可以根据需要调整高度 */
+  max-width: 1100px;
   overflow-y: auto; /* 启用垂直滚动条 */
-  margin: 20px;
+  padding: 10px 0px;
+  margin: 25px 0px;
 }
 
 .student-info {
-  margin-bottom: 1rem; /* 为每个学生信息之间添加间距 */
+  /* margin-bottom: 1rem; 为每个学生信息之间添加间距 */
+  width: 410px;
+  margin: 10px 25px;
+  padding: 6px 18px;
+  border: 3px solid #e2e8f4;
+  background-color: #e4edff;
+  border-radius: 10px;
 }
 </style>

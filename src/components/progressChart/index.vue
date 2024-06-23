@@ -1,5 +1,7 @@
 <template>
-  <div id="chart"></div>
+  <div id="container">
+    <div id="chart" ref="chart"></div>
+  </div>
 </template>
 
 <script>
@@ -41,7 +43,7 @@ export default {
       const margin = { top: 20, right: 30, bottom: 50, left: 45 };
 
       const svg = d3
-        .select('#chart')
+        .select(this.$refs.chart)
         .append('svg')
         .attr('width', width)
         .attr('height', height)
@@ -154,4 +156,22 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  /* position: relative; */
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 350px; */
+  display: flex;
+  justify-content: center;
+}
+#chart {
+  display: flex;
+  flex-direction: row;
+  padding-top: 45px;
+  flex-wrap: nowrap;
+  width: 550px;
+  overflow-x: scroll;
+}
+</style>

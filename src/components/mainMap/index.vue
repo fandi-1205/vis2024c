@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div id="mainChart" ref="chartContainer"></div>
+    <div id="mainChart" ref="chartContainer">
+      <div class="map-title">学生整体信息视图</div>
+      <div class="map-pic">
+        <img src="pic_hd.jpg" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,7 +27,7 @@ export default {
       return 1100 - this.margin.left - this.margin.right;
     },
     height() {
-      return 1150 - this.margin.top - this.margin.bottom;
+      return 1250 - this.margin.top - this.margin.bottom;
     },
     centerX() {
       return this.width / 2;
@@ -182,8 +187,8 @@ export default {
           .attr('opacity', 0.3);
 
         const last = scale(d3.max(dayBetween));
-        const lastPositionX = centerX + (last + 40) * Math.cos(angle);
-        const lastPositionY = centerY + (last + 40) * Math.sin(angle);
+        const lastPositionX = centerX + (last + 50) * Math.cos(angle);
+        const lastPositionY = centerY + (last + 50) * Math.sin(angle);
 
         this.container
           .append('text')
@@ -197,9 +202,10 @@ export default {
             }, ${lastPositionX}, ${lastPositionY})`
           )
           .text(axis.name)
+          // .text('')
           .style('font-size', '24px')
           // 设置字体颜色
-          .style('fill', 'blue');
+          .style('fill', '#365DAA');
       });
     },
     zoomed(event) {
@@ -211,7 +217,26 @@ export default {
 
 <style scoped>
 #mainChart {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+.map-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  color: #365daa;
+  font-size: 24px;
+}
+.map-pic {
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  padding: 10px;
+}
+img {
+  width: 270px;
+  height: 250px;
 }
 </style>

@@ -1,12 +1,15 @@
 <template>
-  <div class="chart-container">
-    <div
-      v-for="(dataset, index) in datasets"
-      :key="index"
-      :id="'chart' + (index + 1)"
-      class="chart"
-    ></div>
-    <div class="tooltip" id="tooltip"></div>
+  <div>
+    <div class="map-title">班级视图</div>
+    <div class="chart-container">
+      <div
+        v-for="(dataset, index) in datasets"
+        :key="index"
+        :id="'chart' + (index + 1)"
+        class="chart"
+      ></div>
+      <div class="tooltip" id="tooltip"></div>
+    </div>
   </div>
 </template>
 
@@ -191,7 +194,7 @@ export default {
             scoreScale(d.data[1]) *
             Math.sin((2 * Math.PI * i) / knowledgeScores.length - Math.PI / 2)
         )
-        .attr('r', 1.5)
+        .attr('r', 2.5)
         .attr('fill', '#FB8DB2')
         .on('mouseover', function (event, d) {
           tooltip.transition().duration(200).style('opacity', 0.9);
@@ -217,6 +220,7 @@ export default {
   shape-rendering: crispEdges;
 }
 .chart-container {
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -224,6 +228,14 @@ export default {
   height: 1450px;
   overflow-y: auto; /* Add vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar if not needed */
+}
+.map-title {
+  /* position: absolute; */
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  color: #365daa;
+  font-size: 24px;
 }
 .chart {
   flex: 1 1 49%;

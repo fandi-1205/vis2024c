@@ -1,5 +1,11 @@
 <template>
-  <div id="heatmap-container"></div>
+  <div class="top-main">
+    <div class="map-title">答题高峰时段图</div>
+    <div class="pic">
+      <img src="pic3.jpg" alt="img" />
+    </div>
+    <div id="heatmap-container" ref="heatmapContainer"></div>
+  </div>
 </template>
 
 <script>
@@ -48,7 +54,7 @@ export default {
       .then((response) => {
         this.data = response.data;
         console.log(this.data);
-        const container = d3.select(this.$el); // Select the outer container
+        const container = d3.select(this.$refs.heatmapContainer); // Select the outer container
 
         this.data.forEach((student) => {
           // Create a container for each student
@@ -157,5 +163,33 @@ export default {
 .hourLabel {
   font-size: 15px;
   /* font-weight: bold; */
+}
+.header {
+  text-align: center; /* 居中显示，可根据需求调整 */
+  margin-top: 0; /* 移除顶部外边距，使其紧贴容器顶部 */
+  padding: 10px 0; /* 可选，上下内边距，用于美观 */
+}
+.top-main {
+  position: relative;
+}
+.map-title {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  text-align: right;
+  /* left: 10px; */
+  padding: 2px 10px;
+  color: #365daa;
+  font-size: 24px;
+}
+.pic {
+  position: absolute;
+  top: -10px;
+  left: 30%;
+}
+.pic img {
+  width: 400px;
+  height: 70px;
+  object-fit: fill;
 }
 </style>

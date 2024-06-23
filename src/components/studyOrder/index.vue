@@ -1,8 +1,12 @@
 <template>
-  <div class="container">
-    <div class="column" id="column"></div>
-    <!-- <div class="column" id="right-column"></div> -->
-    <div class="tooltip" id="tooltip"></div>
+  <div class="top-main">
+    <div class="map-title">学习流程图</div>
+    <div class="pic"><img src="pic2.jpg" alt="img" /></div>
+    <div class="container">
+      <div class="column" id="column"></div>
+      <!-- <div class="column" id="right-column"></div> -->
+      <div class="tooltip" id="tooltip"></div>
+    </div>
   </div>
 </template>
 
@@ -273,5 +277,30 @@ export default {
 
 .label {
   font-size: 20px; /* Adjust node label font size here */
+}
+.top-main {
+  position: relative;
+}
+.map-title {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  text-align: right;
+  /* left: 10px; */
+  padding: 2px 10px;
+  color: #365daa;
+  font-size: 24px;
+}
+.pic {
+  position: absolute;
+  top: -30px;
+  left: 32%;
+  /* width: 200px; */
+  /* height: 100px; */
+}
+.pic img {
+  width: 390px;
+  height: 90px;
+  object-fit: contain;
 }
 </style>

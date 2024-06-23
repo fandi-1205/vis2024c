@@ -1,8 +1,12 @@
 <template>
-  <div id="knowledge-mastery">
-    <div ref="chart"></div>
-    <div class="tooltip" ref="tooltip" v-if="tooltipContent"></div>
-    <!-- 悬浮框结构 -->
+  <div class="main-top">
+    <div class="map-title">答题正确率图</div>
+    <div class="pic"><img src="pic41.jpg" alt="img" /></div>
+    <div id="knowledge-mastery">
+      <div ref="chart"></div>
+      <div class="tooltip" ref="tooltip" v-if="tooltipContent"></div>
+      <!-- 悬浮框结构 -->
+    </div>
   </div>
 </template>
 
@@ -372,11 +376,34 @@ export default {
   overflow-x: hidden;
 }
 .tooltip {
-  position: absolute;
+  /* position: absolute; */
   background-color: white;
   border: 1px solid #ccc;
   padding: 10px;
   z-index: 10;
   pointer-events: none; /* 防止悬浮框本身影响鼠标事件 */
+}
+.main-top {
+  position: relative;
+}
+.map-title {
+  position: absolute;
+  /* float: right; */
+  right: 50px;
+  /* top: 10px;
+  left: 10px; */
+  /* text-align: right; */
+  padding: 5px 10px;
+  color: #365daa;
+  font-size: 24px;
+}
+.pic {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+.pic img {
+  width: 120px;
+  height: 450px;
 }
 </style>

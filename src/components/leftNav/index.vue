@@ -203,7 +203,11 @@ export default {
               `Knowledge: ${d.data[0]}<br/>Avg Score: ${d.data[1].toFixed(2)}`
             )
             .style('left', event.pageX + 'px')
-            .style('top', event.pageY - 28 + 'px');
+            .style('top', event.pageY - 28 + 'px')
+            .style('background-color', '#EAF1FF')
+            .style('border', '1px solid #3C7DF3')
+            .style('border-radius', '8px')
+            .style('z-index', '100');
         })
         .on('mouseout', function () {
           tooltip.transition().duration(500).style('opacity', 0);
@@ -247,11 +251,11 @@ export default {
   height: auto;
   padding: 8px;
   font: 12px sans-serif;
-  background: #44aa95;
-  border: 0px;
-  border-radius: 8px;
+  /* background: #44aa95; */
+  /* border: 0px;
+  border-radius: 8px; */
   pointer-events: none;
-  opacity: 0;
+  opacity: 80%;
 }
 
 .chart-container::-webkit-scrollbar {

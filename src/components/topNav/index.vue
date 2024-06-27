@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: fandi
  * @Date: 2024-06-20 23:07:41
- * @LastEditTime: 2024-06-22 13:32:40
+ * @LastEditTime: 2024-06-24 08:22:51
  * @LastEditors: fandi
 -->
 <template>
@@ -70,7 +70,7 @@ button {
   background-color: #7099e5;
   color: #fff;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -79,7 +79,7 @@ button {
 }
 
 .navbar-right {
-  margin-right: 20px;
+  margin-right: 80px;
 }
 
 .legend-details {

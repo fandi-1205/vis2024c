@@ -6,12 +6,16 @@
       <div ref="chart"></div>
       <div class="tooltip" ref="tooltip" v-if="tooltipContent"></div>
       <!-- 悬浮框结构 -->
+      <div v-if="showPopup" class="popup-box">
+        <!-- 浮框内容，这里不依赖于特定从D3传来的数据 -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import * as d3 from 'd3';
+// import
 
 export default {
   name: 'KnowledgeMastery',
@@ -19,18 +23,23 @@ export default {
     return {
       width: 1550,
       height: 280,
+      showPopup: false, // 控制浮框显示的标志
     };
   },
   mounted() {
     this.createChart();
   },
   methods: {
+    togglePopup() {
+      this.showPopup = !this.showPopup; // 简单地切换显示状态
+    },
     createChart() {
       const width = this.width;
       const height = this.height;
       //     读取CSV文件
       Promise.all([
-        d3.csv('SubmitRecord-Class4.csv'),
+        // d3.csv('SubmitRecord-Class4.csv'),
+        d3.csv('3students.csv'),
         d3.csv('Data_TitleInfo.csv'),
       ]).then(([classData, titleInfoData]) => {
         let titleInfoMap = {};
@@ -251,27 +260,27 @@ export default {
               .attr('class', 'sub-circle')
               .attr('r', (sk) => subRadiusScale(sk.count))
               .attr('fill', '#FCD5F8')
-              .style('opacity', (sk) => sk.accuracy);
-            // .on('mouseover', function (event, sk) {
-            //   // 鼠标悬停事件处理程序
-            //   const currentSubKnowledge = sk.sub_knowledge; // 获取当前子知识点名称
+              .style('opacity', (sk) => sk.accuracy)
+              .on('mouseover', function (event, sk) {
+                // 鼠标悬停事件处理程序
+                const currentSubKnowledge = sk.sub_knowledge; // 获取当前子知识点名称
 
-            //   // 选择所有与当前子知识点名称相同的圆，并高亮显示
-            //   d3.selectAll(`.sub-circle`)
-            //     .filter((d) => d.sub_knowledge === currentSubKnowledge)
-            //     .attr('fill', '#FF4975') // 改变填充颜色
-            //     .style('opacity', 1); // 改变透明度
-            // })
-            // .on('mouseout', function (event, sk) {
-            //   // 鼠标移出事件处理程序
-            //   const currentSubKnowledge = sk.sub_knowledge; // 获取当前子知识点名称
+                // 选择所有与当前子知识点名称相同的圆，并高亮显示
+                d3.selectAll(`.sub-circle`)
+                  .filter((d) => d.sub_knowledge === currentSubKnowledge)
+                  .attr('fill', '#FF4975') // 改变填充颜色
+                  .style('opacity', 1); // 改变透明度
+              })
+              .on('mouseout', function (event, sk) {
+                // 鼠标移出事件处理程序
+                const currentSubKnowledge = sk.sub_knowledge; // 获取当前子知识点名称
 
-            //   // 恢复所有与当前子知识点名称相同的圆的原始样式
-            //   d3.selectAll(`.sub-circle`)
-            //     .filter((d) => d.sub_knowledge === currentSubKnowledge)
-            //     .attr('fill', '#FCD5F8') // 恢复原始填充颜色
-            //     .style('opacity', (sk) => sk.accuracy); // 恢复原始透明度
-            // });
+                // 恢复所有与当前子知识点名称相同的圆的原始样式
+                d3.selectAll(`.sub-circle`)
+                  .filter((d) => d.sub_knowledge === currentSubKnowledge)
+                  .attr('fill', '#FCD5F8') // 恢复原始填充颜色
+                  .style('opacity', (sk) => sk.accuracy); // 恢复原始透明度
+              });
 
             subG
               .append('text')
@@ -295,28 +304,31 @@ export default {
               .style('fill-opacity', (t) => t.accuracy)
               .style('stroke', '#FF4975')
               .style('stroke-width', (t) => (t.accuracy < 0.1 ? 2 : 0))
-              .style('stroke-opacity', 0.8);
-            // .on('mouseover', function (event, t) {
-            //   // 鼠标悬停事件处理程序
-            //   const currentTitleID = t.title_ID; // 获取当前题目 ID
+              .style('stroke-opacity', 0.8)
+              // .on('click', () => {
+              //   this.togglePopup(); // 点击时调用togglePopup方法
+              // });
+              .on('mouseover', function (event, t) {
+                // 鼠标悬停事件处理程序
+                const currentTitleID = t.title_ID; // 获取当前题目 ID
 
-            //   // 选择所有与当前题目 ID 相同的小圆，并高亮显示
-            //   d3.selectAll(`.tiny-circle`)
-            //     .filter((d) => d.title_ID === currentTitleID)
-            //     .attr('fill', '#FF4975') // 改变填充颜色
-            //     .style('opacity', 1); // 改变透明度
-            // })
-            // .on('mouseout', function (event, t) {
-            //   // 鼠标移出事件处理程序
-            //   const currentTitleID = t.title_ID; // 获取当前题目 ID
+                // 选择所有与当前题目 ID 相同的小圆，并高亮显示
+                d3.selectAll(`.tiny-circle`)
+                  .filter((d) => d.title_ID === currentTitleID)
+                  .attr('fill', '#FF4975') // 改变填充颜色
+                  .style('opacity', 1); // 改变透明度
+              })
+              .on('mouseout', function (event, t) {
+                // 鼠标移出事件处理程序
+                const currentTitleID = t.title_ID; // 获取当前题目 ID
 
-            //   // 恢复所有与当前题目 ID 相同的小圆的原始样式
-            //   d3.selectAll(`.tiny-circle`)
-            //     .filter((d) => d.title_ID === currentTitleID)
-            //     .attr('fill', '#7CE9B5') // 恢复原始填充颜色
-            //     .style('opacity', (t) => t.accuracy) // 恢复原始透明度
-            //     .style('stroke-width', (t) => (t.accuracy < 0.1 ? 2 : 0)); // 恢复描边宽度
-            // });
+                // 恢复所有与当前题目 ID 相同的小圆的原始样式
+                d3.selectAll(`.tiny-circle`)
+                  .filter((d) => d.title_ID === currentTitleID)
+                  .attr('fill', '#7CE9B5') // 恢复原始填充颜色
+                  .style('opacity', (t) => t.accuracy) // 恢复原始透明度
+                  .style('stroke-width', (t) => (t.accuracy < 0.1 ? 2 : 0)); // 恢复描边宽度
+              });
 
             tinyG
               .append('text')

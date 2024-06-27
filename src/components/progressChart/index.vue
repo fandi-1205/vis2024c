@@ -150,7 +150,7 @@ export default {
         .style('font-size', '15px') // 设置文本大小为 16 像素
         .style('font-weight', 'bold') // 将文本设为加粗
         .style('text-anchor', 'middle')
-        .text('Studen ID:' + this.studentId);
+        .text('Student ID:' + this.studentId);
     },
   },
 };

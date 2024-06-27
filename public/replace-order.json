@@ -1,0 +1,1558 @@
+{
+    "0fc996fff93c00ca5ced": [
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 208,
+            "correct_submission_count": 7,
+            "knowledge_start_time": "2024-09-13 19:41:49",
+            "knowledge_end_time": "2024-10-16 23:38:22"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 25,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-10-16 23:38:22",
+            "knowledge_end_time": "2024-10-21 17:52:17"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 3,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-10-21 17:52:17",
+            "knowledge_end_time": "2024-10-21 18:02:49"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 28,
+            "correct_submission_count": 4,
+            "knowledge_start_time": "2024-10-21 18:02:49",
+            "knowledge_end_time": "2024-10-24 12:11:18"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 124,
+            "correct_submission_count": 7,
+            "knowledge_start_time": "2024-10-24 12:11:18",
+            "knowledge_end_time": "2024-11-04 18:53:21"
+        },
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-04 18:53:21",
+            "knowledge_end_time": "2024-11-06 12:37:02"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 4,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-06 12:37:02",
+            "knowledge_end_time": "2024-11-20 16:06:36"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-20 16:06:36",
+            "knowledge_end_time": "2024-11-20 16:24:39"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 13,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-11-20 16:24:39",
+            "knowledge_end_time": "2024-11-29 22:47:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-29 22:47:51",
+            "knowledge_end_time": "2024-11-29 22:48:09"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-29 22:48:09",
+            "knowledge_end_time": "2024-11-29 22:48:09"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-29 22:48:09",
+            "knowledge_end_time": "2024-11-30 17:20:40"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 15,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-30 17:20:40",
+            "knowledge_end_time": "2024-12-01 21:36:27"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:36:27",
+            "knowledge_end_time": "2024-12-01 21:37:23"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:37:23",
+            "knowledge_end_time": "2024-12-01 21:37:23"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:37:23",
+            "knowledge_end_time": "2024-12-01 21:38:34"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:38:34",
+            "knowledge_end_time": "2024-12-01 21:41:30"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:41:30",
+            "knowledge_end_time": "2024-12-01 21:41:45"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:41:45",
+            "knowledge_end_time": "2024-12-01 21:41:45"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:41:45",
+            "knowledge_end_time": "2024-12-01 21:42:09"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:42:09",
+            "knowledge_end_time": "2024-12-01 21:42:09"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:42:09",
+            "knowledge_end_time": "2024-12-01 21:44:10"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:44:10",
+            "knowledge_end_time": "2024-12-01 21:44:10"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 21:44:10",
+            "knowledge_end_time": "2024-12-01 21:47:30"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 21:47:30",
+            "knowledge_end_time": "2024-12-01 21:47:30"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 21:47:30",
+            "knowledge_end_time": "2024-12-01 22:09:41"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:09:41",
+            "knowledge_end_time": "2024-12-01 22:09:41"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:09:41",
+            "knowledge_end_time": "2024-12-01 22:23:22"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:23:22",
+            "knowledge_end_time": "2024-12-01 22:29:28"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:29:28",
+            "knowledge_end_time": "2024-12-01 22:29:44"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:29:44",
+            "knowledge_end_time": "2024-12-01 22:29:44"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:29:44",
+            "knowledge_end_time": "2024-12-01 22:30:15"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:30:15",
+            "knowledge_end_time": "2024-12-01 22:30:15"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:30:15",
+            "knowledge_end_time": "2024-12-01 22:30:23"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:30:23",
+            "knowledge_end_time": "2024-12-01 22:30:23"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:30:23",
+            "knowledge_end_time": "2024-12-01 22:32:36"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:32:36",
+            "knowledge_end_time": "2024-12-01 22:32:36"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:32:36",
+            "knowledge_end_time": "2024-12-01 22:36:32"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:36:32",
+            "knowledge_end_time": "2024-12-01 22:36:32"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:36:32",
+            "knowledge_end_time": "2024-12-01 22:37:05"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:37:05",
+            "knowledge_end_time": "2024-12-01 22:37:27"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 22:37:27",
+            "knowledge_end_time": "2024-12-01 22:42:20"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 22:42:20",
+            "knowledge_end_time": "2024-12-01 22:42:20"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 6,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-01 22:42:20",
+            "knowledge_end_time": "2024-12-02 10:12:13"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:12:13",
+            "knowledge_end_time": "2024-12-02 10:12:13"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:12:13",
+            "knowledge_end_time": "2024-12-02 10:12:25"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:12:25",
+            "knowledge_end_time": "2024-12-02 10:12:42"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:12:42",
+            "knowledge_end_time": "2024-12-02 10:12:42"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:12:42",
+            "knowledge_end_time": "2024-12-02 10:13:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:13:51",
+            "knowledge_end_time": "2024-12-02 10:29:43"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:29:43",
+            "knowledge_end_time": "2024-12-02 10:29:43"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:29:43",
+            "knowledge_end_time": "2024-12-02 10:29:51"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:29:51",
+            "knowledge_end_time": "2024-12-02 10:29:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:29:51",
+            "knowledge_end_time": "2024-12-02 10:40:39"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:40:39",
+            "knowledge_end_time": "2024-12-02 10:40:39"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:40:39",
+            "knowledge_end_time": "2024-12-02 10:40:51"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:40:51",
+            "knowledge_end_time": "2024-12-02 10:40:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:40:51",
+            "knowledge_end_time": "2024-12-02 10:41:04"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 10:41:04",
+            "knowledge_end_time": "2024-12-02 10:41:04"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 14,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-02 10:41:04",
+            "knowledge_end_time": "2024-12-02 19:29:02"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 19:29:02",
+            "knowledge_end_time": "2024-12-02 19:29:02"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 19:29:02",
+            "knowledge_end_time": "2024-12-02 22:10:33"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-02 22:10:33",
+            "knowledge_end_time": "2024-12-03 23:25:20"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-03 23:25:20",
+            "knowledge_end_time": "2024-12-03 23:25:20"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-03 23:25:20",
+            "knowledge_end_time": "2024-12-03 23:25:44"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-03 23:25:44",
+            "knowledge_end_time": "2024-12-03 23:32:38"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-03 23:32:38",
+            "knowledge_end_time": "2024-12-03 23:32:38"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-03 23:32:38",
+            "knowledge_end_time": "2024-12-03 23:34:00"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-03 23:34:00",
+            "knowledge_end_time": "2024-12-03 23:34:00"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 9,
+            "correct_submission_count": 5,
+            "knowledge_start_time": "2024-12-03 23:34:00",
+            "knowledge_end_time": "2024-12-09 11:44:45"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-09 11:44:45",
+            "knowledge_end_time": "2024-12-09 11:44:45"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 13,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-09 11:44:45",
+            "knowledge_end_time": "2024-12-14 18:06:51"
+        },
+        {
+            "knowledge": "b3C9s",
+            "submission_count": 6,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-14 18:06:51",
+            "knowledge_end_time": "2024-12-14 18:15:33"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 14,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-14 18:15:33",
+            "knowledge_end_time": "2024-12-20 18:54:53"
+        }
+    ],
+     "61de1e21015e07aacbe8": [
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 27,
+            "correct_submission_count": 5,
+            "knowledge_start_time": "2024-09-13 17:19:43",
+            "knowledge_end_time": "2024-10-03 19:53:39"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 26,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-10-03 19:53:39",
+            "knowledge_end_time": "2024-10-26 17:57:46"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 46,
+            "correct_submission_count": 6,
+            "knowledge_start_time": "2024-10-26 17:57:46",
+            "knowledge_end_time": "2024-10-27 06:56:56"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 18,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-10-27 06:56:56",
+            "knowledge_end_time": "2024-10-28 16:07:03"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 17,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-10-28 16:07:03",
+            "knowledge_end_time": "2024-10-28 17:29:09"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 5,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-10-28 17:29:09",
+            "knowledge_end_time": "2024-11-11 21:53:58"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 4,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-11-11 21:53:58",
+            "knowledge_end_time": "2024-11-11 22:09:53"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 4,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-11 22:09:53",
+            "knowledge_end_time": "2024-11-12 20:44:43"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 12,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-11-12 20:44:43",
+            "knowledge_end_time": "2024-11-12 21:25:08"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-12 21:25:08",
+            "knowledge_end_time": "2024-11-12 21:27:26"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:27:26",
+            "knowledge_end_time": "2024-11-12 21:27:26"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:27:26",
+            "knowledge_end_time": "2024-11-12 21:27:34"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:27:34",
+            "knowledge_end_time": "2024-11-12 21:27:34"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:27:34",
+            "knowledge_end_time": "2024-11-12 21:27:51"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:27:51",
+            "knowledge_end_time": "2024-11-12 21:27:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:27:51",
+            "knowledge_end_time": "2024-11-12 21:28:00"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 21:28:00",
+            "knowledge_end_time": "2024-11-12 21:28:59"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 3,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-11-12 21:28:59",
+            "knowledge_end_time": "2024-11-12 21:43:40"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-12 21:43:40",
+            "knowledge_end_time": "2024-11-12 21:43:40"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 3,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-11-12 21:43:40",
+            "knowledge_end_time": "2024-11-12 23:10:34"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-12 23:10:34",
+            "knowledge_end_time": "2024-11-13 09:18:19"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 5,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-13 09:18:19",
+            "knowledge_end_time": "2024-11-13 09:29:39"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 3,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-13 09:29:39",
+            "knowledge_end_time": "2024-11-13 09:34:17"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 09:34:17",
+            "knowledge_end_time": "2024-11-13 09:35:11"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 09:35:11",
+            "knowledge_end_time": "2024-11-13 09:35:11"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 09:35:11",
+            "knowledge_end_time": "2024-11-13 09:35:56"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-13 09:35:56",
+            "knowledge_end_time": "2024-11-13 09:35:56"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 5,
+            "correct_submission_count": 4,
+            "knowledge_start_time": "2024-11-13 09:35:56",
+            "knowledge_end_time": "2024-11-13 16:27:00"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:27:00",
+            "knowledge_end_time": "2024-11-13 16:27:00"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:27:00",
+            "knowledge_end_time": "2024-11-13 16:29:38"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:29:38",
+            "knowledge_end_time": "2024-11-13 16:29:38"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:29:38",
+            "knowledge_end_time": "2024-11-13 16:31:09"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:31:09",
+            "knowledge_end_time": "2024-11-13 16:31:09"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:31:09",
+            "knowledge_end_time": "2024-11-13 16:31:32"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:31:32",
+            "knowledge_end_time": "2024-11-13 16:31:32"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:31:32",
+            "knowledge_end_time": "2024-11-13 16:31:54"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:31:54",
+            "knowledge_end_time": "2024-11-13 16:33:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:33:51",
+            "knowledge_end_time": "2024-11-13 16:47:56"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:47:56",
+            "knowledge_end_time": "2024-11-13 16:47:56"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:47:56",
+            "knowledge_end_time": "2024-11-13 16:50:41"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:50:41",
+            "knowledge_end_time": "2024-11-13 16:50:41"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:50:41",
+            "knowledge_end_time": "2024-11-13 16:51:46"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:51:46",
+            "knowledge_end_time": "2024-11-13 16:52:12"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-13 16:52:12",
+            "knowledge_end_time": "2024-11-13 16:55:08"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-13 16:55:08",
+            "knowledge_end_time": "2024-11-13 16:55:08"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 22,
+            "correct_submission_count": 5,
+            "knowledge_start_time": "2024-11-13 16:55:08",
+            "knowledge_end_time": "2024-11-28 16:37:11"
+        },
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 4,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-11-28 16:37:11",
+            "knowledge_end_time": "2024-11-29 17:31:16"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 11,
+            "correct_submission_count": 4,
+            "knowledge_start_time": "2024-11-29 17:31:16",
+            "knowledge_end_time": "2024-11-29 18:37:25"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 4,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-11-29 18:37:25",
+            "knowledge_end_time": "2024-11-29 22:03:53"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 7,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-11-29 22:03:53",
+            "knowledge_end_time": "2024-11-29 22:31:01"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 27,
+            "correct_submission_count": 10,
+            "knowledge_start_time": "2024-11-29 22:31:01",
+            "knowledge_end_time": "2024-11-29 23:22:03"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-29 23:22:03",
+            "knowledge_end_time": "2024-11-30 16:14:34"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 5,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-11-30 16:14:34",
+            "knowledge_end_time": "2024-11-30 19:00:17"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-30 19:00:17",
+            "knowledge_end_time": "2024-11-30 19:00:29"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-30 19:00:29",
+            "knowledge_end_time": "2024-11-30 19:00:29"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-11-30 19:00:29",
+            "knowledge_end_time": "2024-11-30 19:01:15"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 13,
+            "correct_submission_count": 4,
+            "knowledge_start_time": "2024-11-30 19:01:15",
+            "knowledge_end_time": "2024-12-01 16:54:18"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 16:54:18",
+            "knowledge_end_time": "2024-12-01 16:59:34"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 16:59:34",
+            "knowledge_end_time": "2024-12-01 16:59:34"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 16:59:34",
+            "knowledge_end_time": "2024-12-01 17:22:12"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:22:12",
+            "knowledge_end_time": "2024-12-01 17:22:12"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:22:12",
+            "knowledge_end_time": "2024-12-01 17:22:33"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:22:33",
+            "knowledge_end_time": "2024-12-01 17:22:33"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:22:33",
+            "knowledge_end_time": "2024-12-01 17:23:07"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:23:07",
+            "knowledge_end_time": "2024-12-01 17:23:07"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:23:07",
+            "knowledge_end_time": "2024-12-01 17:23:38"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:23:38",
+            "knowledge_end_time": "2024-12-01 17:23:38"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:23:38",
+            "knowledge_end_time": "2024-12-01 17:23:47"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:23:47",
+            "knowledge_end_time": "2024-12-01 17:23:47"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:23:47",
+            "knowledge_end_time": "2024-12-01 17:32:01"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:32:01",
+            "knowledge_end_time": "2024-12-01 17:32:01"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:32:01",
+            "knowledge_end_time": "2024-12-01 17:37:09"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:37:09",
+            "knowledge_end_time": "2024-12-01 17:37:09"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:37:09",
+            "knowledge_end_time": "2024-12-01 17:39:49"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:39:49",
+            "knowledge_end_time": "2024-12-01 17:39:49"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:39:49",
+            "knowledge_end_time": "2024-12-01 17:48:51"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:48:51",
+            "knowledge_end_time": "2024-12-01 17:48:51"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:48:51",
+            "knowledge_end_time": "2024-12-01 17:51:21"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:51:21",
+            "knowledge_end_time": "2024-12-01 17:51:41"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 22,
+            "correct_submission_count": 5,
+            "knowledge_start_time": "2024-12-01 17:51:41",
+            "knowledge_end_time": "2024-12-02 22:05:11"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 22:05:11",
+            "knowledge_end_time": "2024-12-02 22:05:11"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 22:05:11",
+            "knowledge_end_time": "2024-12-02 22:50:38"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 22:50:38",
+            "knowledge_end_time": "2024-12-02 22:50:38"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 7,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-02 22:50:38",
+            "knowledge_end_time": "2024-12-03 21:58:53"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 10,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-03 21:58:53",
+            "knowledge_end_time": "2024-12-04 12:13:17"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-04 12:13:17",
+            "knowledge_end_time": "2024-12-04 12:13:17"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-04 12:13:17",
+            "knowledge_end_time": "2024-12-04 12:14:25"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 12:14:25",
+            "knowledge_end_time": "2024-12-04 12:14:25"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 12:14:25",
+            "knowledge_end_time": "2024-12-04 12:21:43"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 12:21:43",
+            "knowledge_end_time": "2024-12-04 12:21:43"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 6,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 12:21:43",
+            "knowledge_end_time": "2024-12-04 12:50:16"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 2,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 12:50:16",
+            "knowledge_end_time": "2024-12-04 12:52:13"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 3,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-04 12:52:13",
+            "knowledge_end_time": "2024-12-04 12:54:05"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 4,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-04 12:54:05",
+            "knowledge_end_time": "2024-12-04 12:57:02"
+        },
+        {
+            "knowledge": "b3C9s",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 12:57:02",
+            "knowledge_end_time": "2024-12-04 12:57:35"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 2,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-04 12:57:35",
+            "knowledge_end_time": "2024-12-04 12:58:43"
+        },
+        {
+            "knowledge": "b3C9s",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-04 12:58:43",
+            "knowledge_end_time": "2024-12-04 13:00:57"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 17,
+            "correct_submission_count": 8,
+            "knowledge_start_time": "2024-12-04 13:00:57",
+            "knowledge_end_time": "2024-12-04 22:29:15"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 22:29:15",
+            "knowledge_end_time": "2024-12-04 22:29:15"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 22:29:15",
+            "knowledge_end_time": "2024-12-04 22:30:25"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 22:30:25",
+            "knowledge_end_time": "2024-12-04 22:30:25"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 22:30:25",
+            "knowledge_end_time": "2024-12-04 22:34:51"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-04 22:34:51",
+            "knowledge_end_time": "2024-12-04 22:34:51"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 6,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-04 22:34:51",
+            "knowledge_end_time": "2024-12-05 22:43:49"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-05 22:43:49",
+            "knowledge_end_time": "2024-12-05 22:43:49"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-05 22:43:49",
+            "knowledge_end_time": "2024-12-05 22:44:03"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-05 22:44:03",
+            "knowledge_end_time": "2024-12-05 22:44:03"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-05 22:44:03",
+            "knowledge_end_time": "2024-12-05 22:44:34"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-05 22:44:34",
+            "knowledge_end_time": "2024-12-05 22:44:34"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-05 22:44:34",
+            "knowledge_end_time": "2024-12-05 22:44:52"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-05 22:44:52",
+            "knowledge_end_time": "2024-12-05 22:44:52"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-05 22:44:52",
+            "knowledge_end_time": "2024-12-05 22:50:13"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-05 22:50:13",
+            "knowledge_end_time": "2024-12-05 22:52:09"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 3,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-05 22:52:09",
+            "knowledge_end_time": "2024-12-05 23:06:54"
+        },
+        {
+            "knowledge": "b3C9s",
+            "submission_count": 13,
+            "correct_submission_count": 8,
+            "knowledge_start_time": "2024-12-05 23:06:54",
+            "knowledge_end_time": "2024-12-07 15:33:57"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 29,
+            "correct_submission_count": 9,
+            "knowledge_start_time": "2024-12-07 15:33:57",
+            "knowledge_end_time": "2024-12-07 22:48:01"
+        },
+        {
+            "knowledge": "b3C9s",
+            "submission_count": 8,
+            "correct_submission_count": 6,
+            "knowledge_start_time": "2024-12-07 22:48:01",
+            "knowledge_end_time": "2024-12-07 22:51:43"
+        }
+    ],
+"ac4d829c715fb0c36ad5": [
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 3,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-01 01:25:26",
+            "knowledge_end_time": "2024-12-01 01:28:29"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 3,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-01 01:28:29",
+            "knowledge_end_time": "2024-12-01 01:30:09"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 3,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-01 01:30:09",
+            "knowledge_end_time": "2024-12-01 01:31:20"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 01:31:20",
+            "knowledge_end_time": "2024-12-01 01:32:09"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 01:32:09",
+            "knowledge_end_time": "2024-12-01 17:09:08"
+        },
+        {
+            "knowledge": "t5V9e",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-01 17:09:08",
+            "knowledge_end_time": "2024-12-01 17:27:06"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:27:06",
+            "knowledge_end_time": "2024-12-01 17:33:20"
+        },
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-01 17:33:20",
+            "knowledge_end_time": "2024-12-01 17:33:56"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:33:56",
+            "knowledge_end_time": "2024-12-01 17:34:33"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:34:33",
+            "knowledge_end_time": "2024-12-01 17:35:20"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-01 17:35:20",
+            "knowledge_end_time": "2024-12-01 17:37:37"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-01 17:37:37",
+            "knowledge_end_time": "2024-12-02 12:48:30"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 12:48:30",
+            "knowledge_end_time": "2024-12-02 12:48:59"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 12:48:59",
+            "knowledge_end_time": "2024-12-02 12:50:20"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-02 12:50:20",
+            "knowledge_end_time": "2024-12-02 12:51:05"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-02 12:51:05",
+            "knowledge_end_time": "2024-12-03 00:57:18"
+        },
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 3,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-03 00:57:18",
+            "knowledge_end_time": "2024-12-03 01:02:52"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-03 01:02:52",
+            "knowledge_end_time": "2024-12-03 01:03:42"
+        },
+        {
+            "knowledge": "s8Y2f",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-03 01:03:42",
+            "knowledge_end_time": "2024-12-03 01:03:42"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-03 01:03:42",
+            "knowledge_end_time": "2024-12-03 01:05:35"
+        },
+        {
+            "knowledge": "m3D1v",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-03 01:05:35",
+            "knowledge_end_time": "2024-12-03 01:05:35"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 4,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-03 01:05:35",
+            "knowledge_end_time": "2024-12-07 20:14:37"
+        },
+        {
+            "knowledge": "k4W1c",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-07 20:14:37",
+            "knowledge_end_time": "2024-12-07 20:14:37"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 3,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-07 20:14:37",
+            "knowledge_end_time": "2024-12-07 20:16:06"
+        },
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-07 20:16:06",
+            "knowledge_end_time": "2024-12-07 20:16:40"
+        },
+        {
+            "knowledge": "y9W5d",
+            "submission_count": 1,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-07 20:16:40",
+            "knowledge_end_time": "2024-12-07 20:17:24"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 1,
+            "correct_submission_count": 0,
+            "knowledge_start_time": "2024-12-07 20:17:24",
+            "knowledge_end_time": "2024-12-07 20:19:20"
+        },
+        {
+            "knowledge": "r8S3g",
+            "submission_count": 2,
+            "correct_submission_count": 1,
+            "knowledge_start_time": "2024-12-07 20:19:20",
+            "knowledge_end_time": "2024-12-07 20:21:17"
+        },
+        {
+            "knowledge": "g7R2j",
+            "submission_count": 2,
+            "correct_submission_count": 2,
+            "knowledge_start_time": "2024-12-07 20:21:17",
+            "knowledge_end_time": "2024-12-07 20:22:40"
+        },
+        {
+            "knowledge": "b3C9s",
+            "submission_count": 3,
+            "correct_submission_count": 3,
+            "knowledge_start_time": "2024-12-07 20:22:40",
+            "knowledge_end_time": "2024-12-07 20:23:43"
+        }
+    ]
+   
+    
+
+}

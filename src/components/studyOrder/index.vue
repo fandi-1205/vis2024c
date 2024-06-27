@@ -16,7 +16,9 @@ import * as d3 from 'd3';
 export default {
   name: 'ChordDiagram',
   mounted() {
-    d3.json('111student_knowledge_analysis.json')
+    //111student_knowledge_analysis
+    d3.json('replace-order.json')
+      // d3.json('111student_knowledge_analysis.json')
       .then((data) => {
         const leftColumn = d3.select('#column');
         // const rightColumn = d3.select('#right-column');
@@ -148,7 +150,7 @@ export default {
               <strong>学习顺序:</strong> ${d.source.id} → ${d.target.id}<br>
               <strong>提交次数:</strong> ${d.count}<br>
               <strong>正确提交次数:</strong> ${d.correct_count}<br>
-              <strong>开始时间:</strong> ${d.start_time.toLocaleString()}
+              
             `
                 )
                 .style('left', event.pageX + 5 + 'px')
@@ -191,14 +193,18 @@ export default {
               tooltip
                 .html(
                   `
-              <strong>Source:</strong> ${d.source.id}<br>
-              <strong>Target:</strong> ${d.target.id}<br>
-              <strong>Correct Submissions:</strong> ${d.correct_count}<br>
-              <strong>Start Time:</strong> ${d.start_time.toLocaleString()}
+              <strong>学习顺序:</strong> ${d.source.id}<br>
+              <strong>提交次数:</strong> ${d.target.id}<br>
+              <strong>正确提交次数:</strong> ${d.correct_count}<br>
+              
             `
                 )
                 .style('left', event.pageX + 5 + 'px')
-                .style('top', event.pageY - 28 + 'px');
+                .style('top', event.pageY - 28 + 'px')
+                .style('background-color', '#EAF1FF')
+                .style('border', '1px solid #3C7DF3')
+                .style('border-radius', '8px')
+                .style('z-index', '100');
             })
             .on('mouseout', () => {
               tooltip.transition().duration(500).style('opacity', 0);

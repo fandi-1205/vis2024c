@@ -5,6 +5,7 @@
       <div class="map-pic">
         <img src="pic_hd.jpg" />
       </div>
+      <div class="tooltip" id="tooltip"></div>
     </div>
   </div>
 </template>
@@ -146,6 +147,8 @@ export default {
           const rectCenterX = tickPositionX;
           const rectCenterY = tickPositionY;
 
+          const tooltip = d3.select('#tooltip');
+
           // 添加矩形并旋转，注意transform的语法
           this.container
             .append('circle')
@@ -156,7 +159,17 @@ export default {
             .attr('stroke', colorScale(axis.accuracy))
             .attr('stroke-width', 2)
             // .attr('fill', colorScale(tickValue.value));
-            .attr('fill', colorScaleBlues(tickValue.value));
+            .attr('fill', colorScaleBlues(tickValue.value))
+            .on('mouseover', function (event) {
+              tooltip.transition().duration(200).style('opacity', 0.6);
+              tooltip
+                .html(`尝试次数 ${tickValue.value}`)
+                .style('left', event.pageX + 'px')
+                .style('top', event.pageY - 28 + 'px');
+            })
+            .on('mouseout', function () {
+              tooltip.transition().duration(500).style('opacity', 0);
+            });
         });
 
         const zero = scale(maxData);
@@ -177,6 +190,7 @@ export default {
           .attr('stroke-width', 2);
         // .attr("opacity", 0.5)
         // .attr("stroke-dasharray", "5, 5");
+        const tooltip = d3.select('#tooltip');
 
         this.container
           .append('circle')
@@ -184,7 +198,24 @@ export default {
           .attr('cy', RectPositionY)
           .attr('r', axis.totalAttempts / 2) // 半径大小，根据需要调整
           .attr('fill', '#3C7DF3')
-          .attr('opacity', 0.3);
+          .attr('opacity', 0.3)
+          .on('mouseover', function (event) {
+            tooltip.transition().duration(200).style('opacity', 0.6);
+            tooltip
+              .html(`尝试总次数 ${axis.totalAttempts}`)
+              .style('left', event.pageX + 'px')
+              .style('top', event.pageY - 50 + 'px')
+              .style('background-color', '#EAF1FF')
+              .style('border', '1px solid #3C7DF3')
+              .style('border-radius', '8px')
+              .style('z-index', '100');
+          })
+          .on('mouseout', function () {
+            tooltip.transition().duration(500).style('opacity', 0);
+          })
+          .on('mouseout', function () {
+            tooltip.transition().duration(500).style('opacity', 0);
+          });
 
         const last = scale(d3.max(dayBetween));
         const lastPositionX = centerX + (last + 50) * Math.cos(angle);
@@ -239,4 +270,17 @@ img {
   width: 270px;
   height: 250px;
 }
+/* .tooltip {
+  position: absolute;
+  text-align: left;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  font: 12px sans-serif;
+  background-color: #e5e5f8;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+} */
 </style>
